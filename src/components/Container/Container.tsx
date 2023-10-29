@@ -1,7 +1,10 @@
-// @ts-ignore
 import styles from './Container.module.scss'
 
-const Container = ({ children }) => {
+interface ContainerProps {
+	children: JSX.Element[]
+}
+
+const Container = ({ children }: ContainerProps) => {
 	return <div className={styles.root}>{children}</div>
 }
 
