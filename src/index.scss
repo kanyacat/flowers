@@ -1,0 +1,70 @@
+//@import 'normalize-scss';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
+
+:root {
+	margin: 0;
+
+	color: #fff;
+
+	font-family: Oswald, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.56px;
+	text-transform: uppercase;
+
+	color: rgba(255, 255, 255, 0.87);
+	background: #040a0a;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	//display: flex;
+	//place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		color: #43ffd2;
+	}
+}
+
+button {
+	padding: 16px 50px;
+	color: black;
+
+	background: #43ffd2;
+	border: none;
+	cursor: pointer;
+
+	transition: background-color 0.25s;
+
+	&:hover {
+		background: #7d2253;
+		color: white;
+	}
+
+	&:active {
+		background: #7d2253;
+		color: white;
+		box-shadow: 0px 0px 10px 0px #52002a inset;
+	}
+
+	&:disabled {
+		background: transparent;
+		color: #555;
+	}
+
+	outline: none;
+}
