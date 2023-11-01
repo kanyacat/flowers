@@ -1,13 +1,14 @@
 import Header from './components/Header/Header'
-import Container from './components/Container/Container'
 import { Routes } from 'react-router-dom'
+import Main from './pages/Main/Main'
 
 function App() {
 	return (
-		<Container>
-			<Header isMain={true} />
+		<>
+			<Header isMain={false} />
+			<Main />
 			<Routes>{/*<Route path='/' element={<Header />} />*/}</Routes>
-		</Container>
+		</>
 	)
 }
 

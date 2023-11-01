@@ -1,6 +1,12 @@
 .root {
-	max-height: 80px;
+	position: fixed;
+	width: 100%;
+	margin: 0 auto;
+
 	background-color: transparent;
+
+	z-index: 1000;
+
 	.list {
 		display: flex;
 		justify-content: space-between;
@@ -13,14 +19,9 @@
 			align-items: center;
 		}
 
-		.left {
-			width: 70%;
-		}
-
-		.right {
-			width: 20%;
-		}
 		nav {
+			margin-right: 50px;
+
 			span {
 				margin-right: 10px;
 				path {
