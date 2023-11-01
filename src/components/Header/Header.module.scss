@@ -1,10 +1,89 @@
 .root {
+	max-height: 80px;
 	background-color: transparent;
 	.list {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
+		.left,
+		.right {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.left {
+			width: 70%;
+		}
+
+		.right {
+			width: 20%;
+		}
 		nav {
+			span {
+				margin-right: 10px;
+				path {
+					transition: fill 0.2s linear;
+				}
+			}
+
+			&:hover {
+				span {
+					path {
+						fill: #43ffd2;
+					}
+				}
+			}
+
+			.phone {
+				position: relative;
+				color: #43ffd2;
+
+				span {
+					position: absolute;
+					content: '';
+
+					top: 2px;
+					left: -27px;
+
+					width: 18px;
+					height: 18px;
+
+					background: url('https://svgur.com/i/zBm.svg');
+				}
+			}
+		}
+		.cart {
+			position: relative;
+
+			path {
+				transition: fill 0.2s linear;
+			}
+
+			&:hover {
+				path {
+					fill: #43ffd2;
+				}
+			}
+
+			.count {
+				position: absolute;
+
+				bottom: 20px;
+				left: 20px;
+
+				font-size: 12px;
+				line-height: 15px;
+				text-align: center;
+				color: black;
+
+				width: 16px;
+				height: 16px;
+
+				background-color: #43ffd2;
+				border-radius: 100%;
+			}
 		}
 	}
 }

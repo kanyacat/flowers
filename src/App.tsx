@@ -5,7 +5,7 @@ import { Routes } from 'react-router-dom'
 function App() {
 	return (
 		<Container>
-			<Header />
+			<Header isMain={true} />
 			<Routes>{/*<Route path='/' element={<Header />} />*/}</Routes>
 		</Container>
 	)
