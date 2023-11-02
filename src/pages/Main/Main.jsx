@@ -7,10 +7,18 @@ const Main = () => {
 			<div className={styles.main}>
 				<span className={styles.flowers} />
 				<div className={styles.content}>
-					<h1>LOVER FLOWER</h1>
+					<Container>
+						<h1>LOVER</h1>
+						<span>
+							<h1>FLOWER</h1>
+							<p className={styles.text}>
+								Создаём для тех, кто ценит свежесть и изящество цветка
+							</p>
+							<button>смотреть каталог</button>
+						</span>
+					</Container>
 				</div>
 			</div>
-			<Container> me</Container>
 		</div>
 	)
 }
