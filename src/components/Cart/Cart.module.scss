@@ -1,0 +1,31 @@
+.cart {
+	position: relative;
+
+	path {
+		transition: fill 0.2s linear;
+	}
+
+	&:hover {
+		path {
+			fill: #43ffd2;
+		}
+	}
+
+	.count {
+		position: absolute;
+
+		bottom: 20px;
+		left: 20px;
+
+		font-size: 12px;
+		line-height: 15px;
+		text-align: center;
+		color: black;
+
+		width: 16px;
+		height: 16px;
+
+		background-color: #43ffd2;
+		border-radius: 100%;
+	}
+}

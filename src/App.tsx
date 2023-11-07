@@ -5,7 +5,7 @@ import Main from './pages/Main/Main'
 function App() {
 	return (
 		<>
-			<Header isMain={false} />
+			<Header isMain={true} />
 			<Main />
 			<Routes>{/*<Route path='/' element={<Header />} />*/}</Routes>
 		</>

@@ -79,4 +79,121 @@
 			}
 		}
 	}
+
+	.right {
+		position: absolute;
+		top: 45px;
+		right: 100px;
+
+		height: 40%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: right;
+
+		z-index: 101;
+
+		&Block {
+			margin-bottom: 30px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+
+			color: #fff;
+			font-size: 10px;
+			font-weight: 300;
+			letter-spacing: 1px;
+
+			font-style: normal;
+			line-height: normal;
+			text-transform: uppercase;
+
+			&:nth-child(2) {
+				margin-bottom: 100px;
+			}
+
+			&:nth-child(3) {
+				margin-bottom: 120px;
+			}
+
+			.mail,
+			.address {
+				margin-bottom: 4px;
+
+				font-weight: 400;
+				color: #43ffd2;
+				font-size: 14px;
+				letter-spacing: 1.4px;
+			}
+
+			.time {
+				width: 30%;
+				text-align: right;
+			}
+
+			.social {
+				display: flex;
+				flex-direction: column;
+
+				border-radius: 10px;
+				background: rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(10px);
+
+				padding: 15px;
+
+				&Link {
+					margin-bottom: 20px;
+
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+
+			.phone {
+				margin-bottom: 10px;
+
+				color: #43ffd2;
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 1.6px;
+			}
+
+			.phoneBtn {
+				border-radius: 10px;
+				background: rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(10px);
+
+				padding: 9px 19px 9px 40px;
+
+				color: #43ffd2;
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: 1.4px;
+
+				span {
+					position: absolute;
+					content: '';
+
+					top: 11.1px;
+					left: 14px;
+
+					width: 18px;
+					height: 18px;
+
+					background: url('https://svgur.com/i/zBm.svg');
+				}
+			}
+
+			.cart {
+				padding: 15px;
+
+				border-radius: 10px;
+				background: rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(10px);
+			}
+		}
+	}
 }
