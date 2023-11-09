@@ -8,6 +8,12 @@ const Catalogue = () => {
 			<Container>
 				<h1>Каталог</h1>
 				<div className={styles.cards}>
+					<span className={styles.backtext}>
+						<span>букеты</span>
+						<span>цветы</span>
+						<span>дополнительно</span>
+					</span>
+
 					<div className={styles.text}>
 						<p>
 							У нас самый большой выбор цветов, букетов, открыток и подарков. Мы
@@ -28,11 +34,25 @@ const Catalogue = () => {
 						</Link>
 					</div>
 					<div className={styles.card}>
-						<h2>готовые букеты из сухоцветов</h2>
+						<h2>Цветы</h2>
 						<ul>
-							<li>букеты</li>
-							<li>для интерьера</li>
-							<li>Композиции</li>
+							<li>Сборные букеты</li>
+							<li>Монобукеты</li>
+							<li>Композиции из цветов</li>
+							<li>розы</li>
+							<li>свадебные</li>
+						</ul>
+						<Link to={'/'} className={styles.link}>
+							смотреть каталог
+						</Link>
+					</div>
+					<div className={styles.card}>
+						<h2>дополнительно</h2>
+						<ul>
+							<li>шары</li>
+							<li>игрушки</li>
+							<li>открытки</li>
+							<li>упаковка</li>
 						</ul>
 						<Link to={'/'} className={styles.link}>
 							смотреть каталог

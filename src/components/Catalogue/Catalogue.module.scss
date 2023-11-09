@@ -1,4 +1,49 @@
 .root {
+	position: relative;
+	margin-top: 50px;
+
+	padding-bottom: 223px;
+
+	overflow: hidden;
+
+	&:before {
+		position: absolute;
+
+		content: '';
+		top: 60%;
+		right: 0;
+
+		width: 879.44px;
+		height: 211.054px;
+		transform: rotate(32.828deg);
+		flex-shrink: 0;
+
+		border-radius: 879.44px;
+		background: #43ffd2;
+		filter: blur(125px);
+
+		z-index: -1;
+	}
+
+	&:after {
+		position: absolute;
+
+		content: '';
+		top: 50%;
+		left: -8%;
+
+		width: 707.545px;
+		height: 236.872px;
+		transform: rotate(32.828deg);
+		flex-shrink: 0;
+
+		border-radius: 707.545px;
+		background: #7d2253;
+		filter: blur(125px);
+
+		z-index: -1;
+	}
+
 	h1 {
 		margin-bottom: 10px;
 
@@ -14,6 +59,7 @@
 
 	.text {
 		width: 50%;
+		margin-bottom: 50px;
 
 		color: #fff;
 		font-family: Oswald, serif;
@@ -31,13 +77,48 @@
 	}
 
 	.cards {
+		position: relative;
+
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: flex-start;
+
+		.backtext {
+			span {
+				position: absolute;
+
+				color: #0a1717;
+				font-size: 200px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				letter-spacing: 8px;
+				text-transform: uppercase;
+
+				z-index: -2;
+
+				&:nth-child(1) {
+					bottom: 60%;
+					right: -8%;
+				}
+
+				&:nth-child(2) {
+					bottom: 20%;
+					left: -8%;
+				}
+
+				&:nth-child(3) {
+					bottom: -15%;
+					left: 45%;
+				}
+			}
+		}
 	}
 
 	.card {
+		position: relative;
+
 		max-width: 540px;
 		padding: 30px;
 		margin-top: 30px;
@@ -53,12 +134,28 @@
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 
-		&:nth-child(2) {
-			width: 30%;
+		&:nth-child(3) {
+			width: 36%;
+
+			min-height: 221px;
+		}
+
+		&:nth-child(4) {
+			width: 42%;
+
+			margin-top: -30px;
+
+			min-height: 225px;
+		}
+
+		&:nth-child(5) {
+			width: 42%;
+
+			min-height: 190px;
 		}
 
 		h2 {
-			width: 80%;
+			width: 70%;
 
 			margin-left: 29px;
 
@@ -68,7 +165,10 @@
 		}
 
 		.link {
-			margin-left: 200px;
+			position: absolute;
+
+			bottom: 30px;
+			right: 30px;
 
 			color: #d978ac;
 			font-size: 12px;

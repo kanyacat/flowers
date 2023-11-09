@@ -6,7 +6,7 @@ const Main = () => {
 	return (
 		<div className={styles.root}>
 			<Intro />
-			<Catalogue />{' '}
+			<Catalogue />
 		</div>
 	)
 }
