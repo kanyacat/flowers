@@ -4,7 +4,7 @@
 
 	padding-bottom: 223px;
 
-	overflow: hidden;
+	//overflow: hidden;
 
 	&:before {
 		position: absolute;
@@ -30,7 +30,7 @@
 
 		content: '';
 		top: 50%;
-		left: -8%;
+		left: -0%;
 
 		width: 707.545px;
 		height: 236.872px;
@@ -46,19 +46,11 @@
 
 	h1 {
 		margin-bottom: 10px;
-
-		color: #fff;
-		font-family: Cormorant, serif;
-		font-size: 100px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		letter-spacing: 2px;
-		text-transform: uppercase;
 	}
 
 	.text {
 		width: 50%;
+		margin-left: 100px;
 		margin-bottom: 50px;
 
 		color: #fff;
@@ -77,6 +69,8 @@
 	}
 
 	.cards {
+		overflow: hidden;
+
 		position: relative;
 
 		display: flex;
@@ -100,16 +94,16 @@
 
 				&:nth-child(1) {
 					bottom: 60%;
-					right: -8%;
+					right: 0;
 				}
 
 				&:nth-child(2) {
 					bottom: 20%;
-					left: -8%;
+					left: -2%;
 				}
 
 				&:nth-child(3) {
-					bottom: -15%;
+					bottom: 0;
 					left: 45%;
 				}
 			}
@@ -119,7 +113,7 @@
 	.card {
 		position: relative;
 
-		max-width: 540px;
+		max-width: 520px;
 		padding: 30px;
 		margin-top: 30px;
 
@@ -135,23 +129,28 @@
 		text-transform: uppercase;
 
 		&:nth-child(3) {
-			width: 36%;
+			width: 30%;
 
 			min-height: 221px;
+
+			margin-right: 50px;
 		}
 
 		&:nth-child(4) {
-			width: 42%;
+			width: 32%;
 
 			margin-top: -30px;
 
 			min-height: 225px;
+
+			margin-left: 50px;
 		}
 
 		&:nth-child(5) {
-			width: 42%;
+			width: 35%;
 
 			min-height: 190px;
+			margin-right: 50px;
 		}
 
 		h2 {
