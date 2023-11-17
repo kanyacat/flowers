@@ -76,10 +76,12 @@ const Slider = () => {
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<span className={styles.sale}>
-							<p className={styles.ellipse}>SALE</p>
-						</span>
-						<img src='https://i.ibb.co/ZBnsC3q/image-114-5.png' alt='букет' />
+						<div className={styles.img}>
+							<span className={styles.sale}>
+								<p className={styles.ellipse}>SALE</p>
+							</span>
+							<img src='https://i.ibb.co/ZBnsC3q/image-114-5.png' alt='букет' />
+						</div>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>

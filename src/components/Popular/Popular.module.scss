@@ -1,3 +1,75 @@
 .root {
+	position: relative;
+
 	margin-bottom: 100px;
+
+	background: url('https://i.ibb.co/84K5dR2/image-115.png') no-repeat right 25px;
+
+	background-size: 974px 748px;
+
+	&:before {
+		position: absolute;
+
+		content: '';
+		top: 40%;
+		left: 0;
+
+		width: 413.998px;
+		height: 661.887px;
+		transform: rotate(32.828deg);
+		flex-shrink: 0;
+
+		background: rgba(67, 255, 210, 0.47);
+
+		filter: blur(125px);
+		z-index: -1;
+	}
+
+	&:after {
+		position: absolute;
+
+		content: '';
+		top: 60%;
+		left: 40%;
+
+		width: 571.277px;
+		height: 396.429px;
+		transform: rotate(32.828deg);
+		flex-shrink: 0;
+
+		background: #7d2253;
+		filter: blur(125px);
+
+		z-index: -1;
+	}
+
+	.title {
+		margin-bottom: 10px;
+		.subtitle {
+			margin-left: 380px;
+		}
+	}
+
+	p {
+		margin-bottom: 56px;
+
+		color: #fff;
+		font-size: 20px;
+		font-weight: 300;
+		letter-spacing: 0.4px;
+
+		text-align: center;
+	}
+
+	.slider {
+		margin-bottom: 60px;
+	}
+
+	.link {
+		color: #d978ac;
+		font-size: 12px;
+		font-weight: 700;
+
+		text-decoration-line: underline;
+	}
 }
