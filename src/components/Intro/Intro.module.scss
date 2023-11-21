@@ -29,6 +29,10 @@
 		filter: blur(125px);
 
 		z-index: 1;
+
+		@media (max-width: 500px) {
+			width: 200.902px;
+		}
 	}
 
 	&:before {
@@ -94,12 +98,47 @@
 			line-height: normal;
 			letter-spacing: 40px;
 			text-transform: uppercase;
+
+			@media (max-width: 1200px) {
+				font-size: 150px;
+			}
+
+			@media (max-width: 1000px) {
+				font-size: 110px;
+				letter-spacing: 35px;
+			}
+
+			@media (max-width: 750px) {
+				font-size: 80px;
+				letter-spacing: 30px;
+			}
+
+			@media (max-width: 660px) {
+				left: 60px;
+				letter-spacing: 20px;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 60px;
+			}
+
+			@media (max-width: 400px) {
+				font-size: 50px;
+			}
 		}
 
 		span {
 			position: absolute;
 			top: 60%;
 			left: 0;
+
+			@media (max-width: 1000px) {
+				left: 5%;
+			}
+
+			@media (max-width: 660px) {
+				left: -8%;
+			}
 
 			z-index: 10;
 
@@ -118,6 +157,14 @@
 				letter-spacing: 0.4px;
 
 				text-transform: none;
+
+				@media (max-width: 500px) {
+					font-size: 16px;
+				}
+
+				@media (max-width: 400px) {
+					font-size: 10px;
+				}
 			}
 		}
 	}
@@ -152,6 +199,12 @@
 			line-height: normal;
 			text-transform: uppercase;
 
+			p {
+				@media (max-width: 880px) {
+					display: none;
+				}
+			}
+
 			&:nth-child(2) {
 				margin-bottom: 100px;
 			}
@@ -168,11 +221,19 @@
 				color: #43ffd2;
 				font-size: 14px;
 				letter-spacing: 1.4px;
+
+				@media (max-width: 880px) {
+					display: none;
+				}
 			}
 
 			.time {
 				width: 30%;
 				text-align: right;
+
+				@media (max-width: 880px) {
+					display: none;
+				}
 			}
 
 			.social {
@@ -192,6 +253,10 @@
 						margin: 0;
 					}
 				}
+
+				@media (max-width: 880px) {
+					display: none;
+				}
 			}
 
 			.phone {
@@ -201,6 +266,10 @@
 				font-size: 16px;
 				font-weight: 400;
 				letter-spacing: 1.6px;
+
+				@media (max-width: 880px) {
+					display: none;
+				}
 			}
 
 			.phoneBtn {
@@ -214,6 +283,10 @@
 				font-size: 14px;
 				font-weight: 400;
 				letter-spacing: 1.4px;
+
+				@media (max-width: 880px) {
+					display: none;
+				}
 
 				span {
 					position: absolute;
@@ -235,6 +308,30 @@
 				border-radius: 10px;
 				background: rgba(0, 0, 0, 0.2);
 				backdrop-filter: blur(10px);
+
+				@media (max-width: 880px) {
+					position: absolute;
+					top: 0;
+					right: -20px;
+				}
+
+				@media (max-width: 650px) {
+					position: absolute;
+					top: 0;
+					right: -40px;
+				}
+
+				@media (max-width: 450px) {
+					position: absolute;
+					top: 0;
+					right: -50px;
+				}
+
+				@media (max-width: 400px) {
+					position: absolute;
+					top: 0;
+					right: -60px;
+				}
 			}
 		}
 	}
