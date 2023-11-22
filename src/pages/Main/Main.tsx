@@ -2,6 +2,7 @@ import styles from './Main.module.scss'
 import Intro from '../../components/Intro/Intro'
 import Catalogue from '../../components/Catalogue/Catalogue'
 import Popular from '../../components/Popular/Popular'
+import HowDoOrder from '../../components/HowDoOrder/HowDoOrder'
 
 const Main = () => {
 	return (
@@ -9,6 +10,7 @@ const Main = () => {
 			<Intro />
 			<Catalogue />
 			<Popular />
+			<HowDoOrder />
 		</div>
 	)
 }
