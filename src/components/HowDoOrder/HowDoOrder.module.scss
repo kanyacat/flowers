@@ -8,8 +8,6 @@
 
 	background-size: 562px 845px;
 
-	float: left;
-
 	.title {
 		margin-bottom: 180px;
 		position: relative;
@@ -26,11 +24,10 @@
 	}
 
 	.columns {
+		margin-left: 40%;
 		display: flex;
 		align-items: center;
 		width: 65%;
-
-		float: right;
 
 		.column {
 			&:not(:last-child) {
