@@ -110,6 +110,29 @@ button {
 
 	outline: none;
 }
+input {
+	background-color: transparent;
+	border: 2px solid #43ffd2;
+	color: #fff;
 
-.btn {
+	font-family: Oswald, serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.56px;
+	text-transform: uppercase;
+
+	outline: none;
+
+	transition: border-color 0.2s linear;
+
+	&::placeholder {
+		color: #395959;
+	}
+
+	&:focus {
+		border: 2px solid #7d2253;
+		outline: none;
+	}
 }
