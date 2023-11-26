@@ -1,6 +1,13 @@
 .root {
 	position: relative;
 
+	padding-top: 22px;
+	padding-bottom: 52px;
+
+	background: #0f2222;
+
+	z-index: -2;
+
 	&:before {
 		position: absolute;
 
@@ -40,13 +47,13 @@
 	.leaves {
 		position: absolute;
 		width: 691.885px;
-		height: 1037.827px;
+		height: 800px;
 
 		background: url('https://i.ibb.co/XXz3gzY/image-123.png') no-repeat
 			transparent left top;
 		background-size: 691.885px 1037.827px;
 
-		z-index: 1;
+		z-index: -1;
 	}
 
 	.have {
@@ -61,15 +68,6 @@
 		left: 35%;
 
 		z-index: 2;
-	}
-
-	.back {
-		padding-top: 22px;
-		padding-bottom: 52px;
-
-		position: absolute;
-		background: #0f2222;
-		z-index: -2;
 	}
 
 	.head {
