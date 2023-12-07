@@ -1,39 +1,152 @@
-import styles from './Inst.module.scss'
+import styles from './Footer.module.scss'
 import Container from '../Container/Container'
 import { Link } from 'react-router-dom'
 
-const Inst = () => {
+interface HeaderProps {
+	isMain: boolean
+}
+
+const Footer = () => {
 	return (
-		<div className={styles.root}>
-			<span className={styles.backtext}>instagram</span>
-			<span className={styles.blur} />
+		<footer className={styles.root}>
 			<Container>
-				<div className={styles.inst}>
-					<div className={styles.photo}>
-						<img
-							src='https://s3-alpha-sig.figma.com/img/02ff/a6b6/c7eed136e8c838ca0db681afa5ec7d37?Expires=1702857600&Signature=cm0Ux4zPFfNcbtAahfq72VrlhFDxNwGlqPa8b8FvwTtduN19-ug1nGBPL8a6Pj672lnkM-m-XkZcm7KvvnVjfE1zl31psVb0ol~EY-boq~fsKSHdq3rwkGgIwBzX37OPF6F5WHGUeV~AnPZyR2M0bLvOISW6Wqodw8AZMo8ZjjbTPoT5AhoA48eKdhiWf2XH8~VaA8DBY-Wfnfpnca7qQflX7PsWrwXzni8QbCiO5HlhdpYA9mN-Iq-IuAHuNgc~QQ-wdxmor5by0pOG44muDwbBo6KgDF3H1R4E1s41hdodajBRe-sP0Ts0CbpX1N-aKa5Z8ycmz2TDx9rHmF58sA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-							alt='ёлочка'
-						/>
-						<img
-							src='https://s3-alpha-sig.figma.com/img/2576/59d4/737e506895fbf964ca1c64eb32bf7a3d?Expires=1702857600&Signature=R4fiN0D-Wu2lsA8DAxd~rOhUS0cbiXdUf6PNDClhM~pa2tIslkBz002L0hPyzSIhWuwIvmOHq3LL2TZ~77nxL0d9Rsg7OY-n37NqQUMCCtL5BxpT~zTjHuL3uWKe4tzNnIzcrKyPIW5E1oKQB~CZdFn8mn~OcFOdRk195dT8KZfA2x~T3gRGEqiY6Mxk-PlWfggUe-I8TfxTobmJJYqHDrwSjo3BO6-WxEOZuJ5xpOFY2ZDgT8RE~pfo-yhomC5vY~n656o72MEjWiU4Wl0103wjMHxbSUYt20SPLJ3qvJG-O63u92zSxbfD0WFxkb1aHlaqk-EXoZW7lXZvclPRxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-							alt='букет-ёлка'
-						/>
-						<img
-							src='https://s3-alpha-sig.figma.com/img/6bf1/cf7d/1c8914cae6d460c6ba629167278304dd?Expires=1702857600&Signature=M8OsoWWiqUc99PbbjSHMwLdCdTozGmhEDENrxcRGWJjQy2pbHqay8fjRhWZl03X3MZBSVHKFHn3H~9YAfvjTUlrUlynG69sZqWtgCQ8~Oaeh~sHG~vg47FcLj6~t~NOVq4BPLalRi8seBzFFDyh8mPpU2nrq9yIcCjIOcU4~STheGFtZwJ9ctv~RXmKrRUypunMi06HCeIgXFFF0vmcaP4k1pgWadYK2JzupkSfPChQqF5ygAylgaxUvH2BGxUI3Rz06wVXsSjgihL8ZA8tTsY~5nq0-pq9lHoV45JfoMuV0psN3CVQucq3jEY1Mp3qeVM1GCQYdBqd6X96E25NyLg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-							alt='свечки'
-						/>
-						<img
-							src='https://s3-alpha-sig.figma.com/img/283b/5de4/00379419340f32647c4044263a074534?Expires=1702857600&Signature=YqQWno6TppjnYNIjPcaXh2mepGMVVYuRpzEPxOV5IMuE3C3tY2nIVBrwFW3n-HCj8HfPzdDWT4b8bHete1YrfoG9PpGcI9iUC9gc-IidBMqeqF1MdreLitfS3pUExXR6Q8blZIpLRfOcBxn4ImXD5NLyJ5sXokk~tFJuFZx4UJD4cCeE42X4Ve44ZW9SK-wgkAKDLJBrk52Ri3mwMjZXaGo4O~XZCIz4ThTBmf93mT22V8ER7TwFfvAxktqe1y3E-8eWAABi~rGg9uOYCrCLWAABBfaG79xdl0cqkrjTMR40HN9i8QkemHZiZYkpz7JK8cxG02A29xLKcPDRCSD~4Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-							alt='золотой букет'
-						/>
+				<div className={styles.footer}>
+					<div className={styles.footer__block}>
+						<Link to={'/'}>
+							<svg
+								className={styles.logo}
+								width='34'
+								height='75'
+								viewBox='0 0 34 75'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<path
+									d='M10.68 50.9C10.68 52.06 10.8 52.92 11.04 53.48C11.32 54 11.8 54.36 12.48 54.56C13.2 54.76 14.32 54.86 15.84 54.86H23.52C27.48 54.86 29.82 52.32 30.54 47.24C30.54 47.12 30.64 47.08 30.84 47.12C31.08 47.12 31.2 47.18 31.2 47.3C30.84 50.46 30.66 53.06 30.66 55.1C30.66 55.42 30.6 55.66 30.48 55.82C30.36 55.94 30.12 56 29.76 56H2.16C2.08 56 2.04 55.88 2.04 55.64C2.04 55.4 2.08 55.28 2.16 55.28C3.72 55.28 4.86 55.18 5.58 54.98C6.34 54.78 6.84 54.4 7.08 53.84C7.36 53.24 7.5 52.34 7.5 51.14V23.36C7.5 22.16 7.36 21.28 7.08 20.72C6.84 20.16 6.34 19.78 5.58 19.58C4.86 19.34 3.72 19.22 2.16 19.22C2.08 19.22 2.04 19.1 2.04 18.86C2.04 18.62 2.08 18.5 2.16 18.5L5.1 18.56C6.78 18.64 8.1 18.68 9.06 18.68C10.14 18.68 11.52 18.64 13.2 18.56L16.02 18.5C16.1 18.5 16.14 18.62 16.14 18.86C16.14 19.1 16.1 19.22 16.02 19.22C14.46 19.22 13.3 19.34 12.54 19.58C11.82 19.78 11.32 20.18 11.04 20.78C10.8 21.34 10.68 22.22 10.68 23.42V50.9Z'
+									fill='#8A8686'
+								/>
+								<path
+									d='M30.55 35.25C30.55 35.35 30.45 35.4 30.25 35.4C30.0833 35.4 30 35.35 30 35.25C30 33.55 29.55 32.2 28.65 31.2C27.75 30.2 26.5667 29.7 25.1 29.7H21.65C20.4167 29.7 19.5 29.7833 18.9 29.95C18.3 30.1167 17.8833 30.4167 17.65 30.85C17.4167 31.2833 17.3 31.95 17.3 32.85V43.85H22.75C24.45 43.85 25.65 43.6 26.35 43.1C27.05 42.5667 27.4 41.6667 27.4 40.4C27.4 40.3333 27.5 40.3 27.7 40.3C27.9 40.3 28 40.3333 28 40.4L27.95 44.35C27.95 45.3167 27.9667 46.0333 28 46.5L28.05 48.85C28.05 48.9167 27.95 48.95 27.75 48.95C27.55 48.95 27.45 48.9167 27.45 48.85C27.45 47.35 27.0833 46.3 26.35 45.7C25.65 45.1 24.3833 44.8 22.55 44.8H17.3V55.75C17.3 56.8167 17.45 57.6 17.75 58.1C18.05 58.5667 18.6167 58.9 19.45 59.1C20.3167 59.3 21.6833 59.4 23.55 59.4C23.65 59.4 23.7 59.5 23.7 59.7C23.7 59.9 23.65 60 23.55 60C22.1833 60 21.1167 59.9833 20.35 59.95L16 59.9L12.7 59.95C12.1 59.9833 11.2667 60 10.2 60C10.1333 60 10.1 59.9 10.1 59.7C10.1 59.5 10.1333 59.4 10.2 59.4C11.5 59.4 12.45 59.3167 13.05 59.15C13.6833 58.9833 14.1 58.6667 14.3 58.2C14.5333 57.7 14.65 56.95 14.65 55.95V32.8C14.65 31.8 14.5333 31.0667 14.3 30.6C14.1 30.1333 13.6833 29.8167 13.05 29.65C12.45 29.45 11.5 29.35 10.2 29.35C10.1333 29.35 10.1 29.25 10.1 29.05C10.1 28.85 10.1333 28.75 10.2 28.75H30C30.3 28.75 30.45 28.9 30.45 29.2L30.55 35.25Z'
+									fill='white'
+								/>
+							</svg>
+						</Link>
+						<h3 className={styles.footer__title}>РЕКВИЗИТЫ</h3>
+						<p>
+							ООО «Ловефлове» 220035, Республика Беларусь, г. Минск, ул.
+							Тимирязева д. 67, комн. 112 (пом.11) УНП 193263781, р/с
+							BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007, г.
+							Минск, улица Толстого
+						</p>
 					</div>
-					<span className={styles.social}>
-						<img
-							src='https://i.ibb.co/R6S3hd5/Component-1-1.png'
-							alt='our social'
-						/>
-						<div className={styles.socialBtn}>
-							<Link to={'/'} className={styles.socialLink}>
+					<div className={styles.footer__block}>
+						<h3 className={styles.footer__title}>каталог</h3>
+						<ul>
+							<li>
+								<Link to={'/'}>популярное</Link>
+							</li>
+							<li>
+								<Link to={'/'}>сухоцветы</Link>
+							</li>
+							<li>
+								<Link to={'/'}>букеты роз</Link>
+							</li>
+							<li>
+								<Link to={'/'}>композиции из цветов</Link>
+							</li>
+							<li>
+								<Link to={'/'}>индивидуальный букет</Link>
+							</li>
+							<li>
+								<Link to={'/'}>букет на праздник</Link>
+							</li>
+							<li>
+								<Link to={'/'}>упаковка подарков</Link>
+							</li>
+							<li>
+								<Link to={'/'}>шары</Link>
+							</li>
+							<li>
+								<Link to={'/'}>открытки</Link>
+							</li>
+							<li>
+								<Link to={'/'}>конверты</Link>
+							</li>
+						</ul>
+					</div>
+					<div className={styles.footer__block}>
+						<h3 className={styles.footer__title}>букет</h3>
+						<ul>
+							<li>
+								<Link to={'/'}>для девушки</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для мужчины</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для жены</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для мамы</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для коллеги</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для начальника</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для дочки</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для детей</Link>
+							</li>
+							<li>
+								<Link to={'/'}>для женщины</Link>
+							</li>
+						</ul>
+					</div>
+					<div className={styles.footer__block}>
+						<Link to={'/'} className={styles.footer__title}>
+							доставка и оплата
+						</Link>
+						<Link to={'/'} className={styles.footer__title}>
+							о нас
+						</Link>
+						<Link to={'/'} className={styles.footer__title}>
+							FAQ
+						</Link>
+						<Link to={'/'} className={styles.footer__title}>
+							контакты
+						</Link>
+						<Link to={'/'} className={styles.footer__title}>
+							для корпоративных клиентов
+						</Link>
+					</div>
+					<div className={styles.footer__block}>
+						<div className={styles.description}>
+							<a
+								href='mailto:zakaz@loverflower.by'
+								className={styles.footer__title}
+							>
+								zakaz@loverflower.by
+							</a>
+							<p> Доставка 24/7 по договоренности с оператором</p>
+						</div>
+						<div className={styles.description}>
+							<h3 className={styles.footer__title}>ул. Тимирязева 67</h3>
+							<p className={styles.description__time}>
+								10:00 до 21:00 без выходных
+							</p>
+						</div>
+						<div className={styles.description}>
+							<a href='tel:+375291136969' className={styles.footer__title}>
+								+375 (29) 113-69-69
+							</a>
+							<p>прием звонков круглосуточно</p>
+						</div>
+						<div className={styles.description__social}>
+							<Link to={'/'} className={styles.link}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									width='25'
@@ -47,7 +160,7 @@ const Inst = () => {
 									/>
 								</svg>
 							</Link>
-							<Link to={'/'} className={styles.socialLink}>
+							<Link to={'/'} className={styles.link}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									width='25'
@@ -63,7 +176,7 @@ const Inst = () => {
 									/>
 								</svg>
 							</Link>
-							<Link to={'/'} className={styles.socialLink}>
+							<Link to={'/'} className={styles.link}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									width='24'
@@ -78,11 +191,11 @@ const Inst = () => {
 								</svg>
 							</Link>
 						</div>
-					</span>
+					</div>
 				</div>
 			</Container>
-		</div>
+		</footer>
 	)
 }
 
-export default Inst
+export default Footer
