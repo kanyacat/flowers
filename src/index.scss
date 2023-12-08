@@ -1,22 +1,30 @@
-//@import 'normalize-scss';
+//@import './scss/vendor/normalize.css';
+@import './scss/vars';
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
 
 :root {
 	margin: 0 auto;
 
-	color: #fff;
-
 	font-family: Oswald, sans-serif;
-	font-size: 14px;
-	font-style: normal;
+	font-size: $second-size;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 0.56px;
 	text-transform: uppercase;
 
-	color: rgba(255, 255, 255, 0.87);
-	background: #040a0a;
+	color: rgba($light-color, 0.87);
+	background: $dark-color;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -27,8 +35,6 @@
 
 body {
 	margin: 0 auto;
-	//display: flex;
-	//place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
 }
@@ -40,36 +46,39 @@ h3,
 h4,
 ul,
 li {
-	display: block;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
 h1 {
-	color: #fff;
+	color: $light-color;
 	font-family: Cormorant, serif;
-	font-size: 100px;
-	font-style: normal;
+	font-size: $title-size;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
+p {
+	color: $light-color;
+}
+
 a {
 	text-decoration: none;
-	color: white;
+	color: $light-color;
 
 	transition: color 0.2s linear;
 
 	&:hover {
-		color: #43ffd2;
+		color: $accent-color;
 	}
 }
 
 button {
 	font-family: Oswald, serif;
-	font-size: 12px;
+	font-size: $main-size;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
@@ -79,28 +88,28 @@ button {
 	padding: 16px 50px;
 	color: black;
 
-	background: #43ffd2;
+	background: $accent-color;
 	border: none;
 	cursor: pointer;
 
 	transition: background-color 0.25s;
 
 	&:hover {
-		background: #7d2253;
-		color: white;
+		background: $active-color;
+		color: $light-color;
 	}
 
 	&:active {
-		background: #7d2253;
-		color: white;
+		background: $active-color;
+		color: $light-color;
 		box-shadow: 0 0 10px 0 #52002a inset;
 	}
 
 	&:focus {
-		color: #040a0a;
+		color: $dark-color;
 
-		border: 1px solid #7d2253;
-		background: #43ffd2;
+		border: 1px solid $active-color;
+		background: $accent-color;
 		box-shadow: none;
 	}
 
@@ -111,13 +120,14 @@ button {
 
 	outline: none;
 }
+
 input {
 	background-color: transparent;
-	border: 2px solid #43ffd2;
-	color: #fff;
+	border: 2px solid $accent-color;
+	color: $light-color;
 
 	font-family: Oswald, serif;
-	font-size: 14px;
+	font-size: $second-size;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -133,7 +143,7 @@ input {
 	}
 
 	&:focus {
-		border: 2px solid #7d2253;
+		border: 2px solid $active-color;
 		outline: none;
 	}
 }

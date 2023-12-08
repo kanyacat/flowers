@@ -1,3 +1,5 @@
+@import 'src/scss/vars';
+
 .root {
 	position: relative;
 
@@ -20,7 +22,7 @@
 		transform: rotate(32.828deg);
 		flex-shrink: 0;
 
-		background: #43ffd2;
+		background: $accent-color;
 
 		filter: blur(125px);
 		z-index: -1;
@@ -38,7 +40,7 @@
 		transform: rotate(32.828deg);
 		flex-shrink: 0;
 
-		background: #7d2253;
+		background: $active-color;
 		filter: blur(125px);
 
 		z-index: -2;
@@ -91,7 +93,7 @@
 				width: 255px;
 				height: 1px;
 
-				background: #43ffd2;
+				background: $accent-color;
 			}
 		}
 	}
@@ -116,9 +118,8 @@
 			}
 
 			p {
-				color: #fff;
 				font-family: Roboto Condensed, serif;
-				font-size: 10px;
+				font-size: $small-size;
 				font-style: normal;
 				font-weight: 400;
 				line-height: normal;

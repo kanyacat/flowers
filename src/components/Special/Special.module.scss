@@ -1,3 +1,5 @@
+@import 'src/scss/vars';
+
 .root {
 	position: relative;
 	margin-bottom: 100px;
@@ -15,7 +17,7 @@
 
 		border-radius: 879.44px;
 
-		background: #7d2253;
+		background: $active-color;
 		filter: blur(125px);
 
 		z-index: -1;
@@ -51,7 +53,7 @@
 				height: 1px;
 				flex-shrink: 0;
 
-				background: #d978ac;
+				background: $second-color;
 			}
 		}
 	}

@@ -1,3 +1,5 @@
+@import '/src/scss/vars';
+
 .main {
 	padding-top: 70px;
 	position: relative;
@@ -25,7 +27,7 @@
 
 		border-radius: 358.902px;
 
-		background: #43ffd2;
+		background: $accent-color;
 		filter: blur(125px);
 
 		z-index: 1;
@@ -48,7 +50,7 @@
 		flex-shrink: 0;
 
 		border-radius: 472.65px;
-		background: #7d2253;
+		background: $active-color;
 
 		filter: blur(125px);
 
@@ -68,7 +70,7 @@
 		background-image: linear-gradient(
 				180deg,
 				rgba(4, 10, 10, 0) 70%,
-				#040a0a 100%
+				$dark-color 100%
 			),
 			url('https://i.ibb.co/87K8M8t/image-101-2.png');
 		background-repeat: no-repeat;
@@ -150,7 +152,7 @@
 				margin-bottom: 47px;
 
 				font-family: Oswald, serif;
-				font-size: 20px;
+				font-size: $subtitle-size;
 				font-style: normal;
 				font-weight: 400;
 				line-height: normal;
@@ -163,7 +165,7 @@
 				}
 
 				@media (max-width: 400px) {
-					font-size: 10px;
+					font-size: $small-size;
 				}
 			}
 		}
@@ -190,8 +192,8 @@
 			flex-direction: column;
 			align-items: flex-end;
 
-			color: #fff;
-			font-size: 10px;
+			color: $light-color;
+			font-size: $small-size;
 			font-weight: 300;
 			letter-spacing: 1px;
 
@@ -218,8 +220,8 @@
 				margin-bottom: 4px;
 
 				font-weight: 400;
-				color: #43ffd2;
-				font-size: 14px;
+				color: $accent-color;
+				font-size: $second-size;
 				letter-spacing: 1.4px;
 
 				@media (max-width: 880px) {
@@ -262,7 +264,7 @@
 			.phone {
 				margin-bottom: 10px;
 
-				color: #43ffd2;
+				color: $accent-color;
 				font-size: 16px;
 				font-weight: 400;
 				letter-spacing: 1.6px;
@@ -279,8 +281,8 @@
 
 				padding: 9px 19px 9px 40px;
 
-				color: #43ffd2;
-				font-size: 14px;
+				color: $accent-color;
+				font-size: $second-size;
 				font-weight: 400;
 				letter-spacing: 1.4px;
 

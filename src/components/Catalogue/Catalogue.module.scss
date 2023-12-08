@@ -1,3 +1,5 @@
+@import '/src/scss/vars';
+
 .root {
 	position: relative;
 	margin-top: 50px;
@@ -19,7 +21,7 @@
 		flex-shrink: 0;
 
 		border-radius: 879.44px;
-		background: #43ffd2;
+		background: $accent-color;
 		filter: blur(125px);
 
 		z-index: -1;
@@ -38,7 +40,7 @@
 		flex-shrink: 0;
 
 		border-radius: 707.545px;
-		background: #7d2253;
+		background: $active-color;
 		filter: blur(125px);
 
 		z-index: -1;
@@ -53,9 +55,8 @@
 		margin-left: 100px;
 		margin-bottom: 50px;
 
-		color: #fff;
 		font-family: Oswald, serif;
-		font-size: 20px;
+		font-size: $subtitle-size;
 		font-style: normal;
 		font-weight: 300;
 		line-height: normal;
@@ -158,7 +159,7 @@
 
 			margin-left: 29px;
 
-			color: #43ffd2;
+			color: $accent-color;
 			font-size: 30px;
 			font-weight: 700;
 		}
@@ -169,8 +170,8 @@
 			bottom: 30px;
 			right: 30px;
 
-			color: #d978ac;
-			font-size: 12px;
+			color: $second-color;
+			font-size: $main-size;
 			font-weight: 700;
 
 			text-decoration-line: underline;

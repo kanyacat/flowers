@@ -1,0 +1,24 @@
+// base
+$font-family: 'PublicSans', sans-serif;
+$second-family: 'LibreBaskerville', serif;
+$content-width: 1440px;
+$container-offset: 65px;
+$container-width: calc($content-width + ($container-offset * 2));
+
+//$offset: 32px;
+
+//sizes
+$main-size: 12px;
+$second-size: 14px;
+$small-size: 10px;
+$title-size: 100px;
+$subtitle-size: 20px;
+
+// colors
+$dark-color: #040a0a;
+$light-color: #fff;
+$accent-color: #43ffd2;
+$active-color: #7d2253;
+$second-color: #d978ac;
+$sale-color: #31985a;
+$error-color: #ff3a44;

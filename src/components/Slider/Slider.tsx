@@ -46,7 +46,7 @@ const Slider = () => {
 
 			<Swiper
 				slidesPerView={3}
-				spaceBetween={40}
+				spaceBetween={30}
 				navigation={{
 					nextEl: '.image-swiper-button-next',
 					prevEl: '.image-swiper-button-prev',
@@ -57,11 +57,15 @@ const Slider = () => {
 			>
 				<SwiperSlide>
 					<div className={styles.info}>
-						<div className={styles.img}>
+						<div>
 							<span className={styles.new}>
 								<p className={styles.ellipse}>NEW</p>
 							</span>
-							<img src='https://i.ibb.co/X5ZG0MB/image-114-3.png' alt='букет' />
+							<img
+								className={styles.img}
+								src='https://i.ibb.co/X5ZG0MB/image-114-3.png'
+								alt='букет'
+							/>
 						</div>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
@@ -69,40 +73,58 @@ const Slider = () => {
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<img src='https://i.ibb.co/8rdWsxg/image-114-4.png' alt='букет' />
+						<img
+							className={styles.img}
+							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
+							alt='букет'
+						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<div className={styles.img}>
-							<span className={styles.sale}>
-								<p className={styles.ellipse}>SALE</p>
-							</span>
-							<img src='https://i.ibb.co/ZBnsC3q/image-114-5.png' alt='букет' />
-						</div>
+						<span className={styles.sale}>
+							<p className={styles.ellipse}>SALE</p>
+						</span>
+						<img
+							className={styles.img}
+							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
+							alt='букет'
+						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<img src='https://i.ibb.co/X5ZG0MB/image-114-3.png' alt='букет' />
+						<img
+							className={styles.img}
+							src='https://i.ibb.co/X5ZG0MB/image-114-3.png'
+							alt='букет'
+						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<img src='https://i.ibb.co/8rdWsxg/image-114-4.png' alt='букет' />
+						<img
+							className={styles.img}
+							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
+							alt='букет'
+						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={styles.slide}>
 					<div className={styles.info}>
-						<img src='https://i.ibb.co/ZBnsC3q/image-114-5.png' alt='букет' />
+						<img
+							className={styles.img}
+							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
+							alt='букет'
+						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
 						<button>в корзину</button>
 					</div>

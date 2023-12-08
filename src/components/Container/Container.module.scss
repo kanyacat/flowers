@@ -1,7 +1,7 @@
+@import '/src/scss/vars';
 .root {
-	margin: 0 100px;
+	margin: 0 auto;
 
-	@media (max-width: 660px) {
-		margin: 0 10px;
-	}
+	padding: 0 $container-offset;
+	max-width: $container-width;
 }

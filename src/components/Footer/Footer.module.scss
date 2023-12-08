@@ -1,8 +1,10 @@
+@import '/src/scss/vars';
+
 .root {
 	padding-top: 14px;
 	padding-bottom: 60px;
 	font-weight: 300;
-	font-size: 12px;
+	font-size: $main-size;
 	letter-spacing: 0.48px;
 
 	ul {
@@ -18,8 +20,8 @@
 			margin-bottom: 10px;
 			margin-top: 10px;
 
-			color: #43ffd2;
-			font-size: 14px;
+			color: $accent-color;
+			font-size: $second-size;
 			font-weight: 700;
 			line-height: normal;
 			letter-spacing: 0.56px;
@@ -31,7 +33,6 @@
 			flex-direction: column;
 
 			p {
-				color: #fff;
 				text-transform: uppercase;
 			}
 
@@ -50,7 +51,7 @@
 
 				p {
 					margin-bottom: 20px;
-					font-size: 10px;
+					font-size: $small-size;
 				}
 
 				&__social {

@@ -1,3 +1,5 @@
+@import '/src/scss/vars';
+
 .root {
 	position: relative;
 	padding-bottom: 200px;
@@ -40,7 +42,7 @@
 			&:last-child {
 				width: 1px;
 				height: 400px;
-				background-color: #d978ac;
+				background-color: $second-color;
 			}
 
 			.step {
@@ -58,19 +60,18 @@
 					height: 10px;
 					flex-shrink: 0;
 
-					background: #d978ac;
+					background: $second-color;
 				}
 
 				h3 {
-					color: #d978ac;
+					color: $second-color;
 					font-size: 30px;
 					font-weight: 700;
 					letter-spacing: 1.2px;
 				}
 
 				p {
-					color: #fff;
-					font-size: 14px;
+					font-size: $second-size;
 					font-style: normal;
 					font-weight: 400;
 					line-height: normal;

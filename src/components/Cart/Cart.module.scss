@@ -1,3 +1,5 @@
+@import 'src/scss/vars';
+
 .cart {
 	position: relative;
 
@@ -7,7 +9,7 @@
 
 	&:hover {
 		path {
-			fill: #43ffd2;
+			fill: $accent-color;
 		}
 	}
 
@@ -17,7 +19,7 @@
 		bottom: 20px;
 		left: 20px;
 
-		font-size: 12px;
+		font-size: $main-size;
 		line-height: 15px;
 		text-align: center;
 		color: black;
@@ -25,7 +27,7 @@
 		width: 16px;
 		height: 16px;
 
-		background-color: #43ffd2;
+		background-color: $accent-color;
 		border-radius: 100%;
 	}
 }

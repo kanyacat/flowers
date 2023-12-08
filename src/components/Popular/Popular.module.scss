@@ -1,3 +1,5 @@
+@import 'src/scss/vars';
+
 .root {
 	position: relative;
 
@@ -37,7 +39,7 @@
 		transform: rotate(32.828deg);
 		flex-shrink: 0;
 
-		background: #7d2253;
+		background: $active-color;
 		filter: blur(125px);
 
 		z-index: -1;
@@ -53,8 +55,7 @@
 	p {
 		margin-bottom: 56px;
 
-		color: #fff;
-		font-size: 20px;
+		font-size: $subtitle-size;
 		font-weight: 300;
 		letter-spacing: 0.4px;
 
@@ -66,8 +67,8 @@
 	}
 
 	.link {
-		color: #d978ac;
-		font-size: 12px;
+		color: $second-color;
+		font-size: $main-size;
 		font-weight: 700;
 
 		text-decoration-line: underline;
