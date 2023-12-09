@@ -1,0 +1,7 @@
+@import '/src/scss/vars';
+
+@mixin grid {
+	display: grid;
+	column-gap: $offset;
+	grid-template-columns: repeat(12, 1fr);
+}

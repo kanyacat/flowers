@@ -2,19 +2,14 @@ import styles from './Footer.module.scss'
 import Container from '../Container/Container'
 import { Link } from 'react-router-dom'
 
-interface HeaderProps {
-	isMain: boolean
-}
-
 const Footer = () => {
 	return (
 		<footer className={styles.root}>
 			<Container>
 				<div className={styles.footer}>
-					<div className={styles.footer__block}>
-						<Link to={'/'}>
+					<div className={styles.block}>
+						<Link className={styles.logo} to={'/'}>
 							<svg
-								className={styles.logo}
 								width='34'
 								height='75'
 								viewBox='0 0 34 75'
@@ -31,16 +26,16 @@ const Footer = () => {
 								/>
 							</svg>
 						</Link>
-						<h3 className={styles.footer__title}>РЕКВИЗИТЫ</h3>
-						<p>
+						<h3 className={styles.title}>РЕКВИЗИТЫ</h3>
+						<p className={styles.address}>
 							ООО «Ловефлове» 220035, Республика Беларусь, г. Минск, ул.
 							Тимирязева д. 67, комн. 112 (пом.11) УНП 193263781, р/с
 							BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007, г.
 							Минск, улица Толстого
 						</p>
 					</div>
-					<div className={styles.footer__block}>
-						<h3 className={styles.footer__title}>каталог</h3>
+					<div className={styles.block}>
+						<h3 className={styles.title}>каталог</h3>
 						<ul>
 							<li>
 								<Link to={'/'}>популярное</Link>
@@ -74,8 +69,8 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className={styles.footer__block}>
-						<h3 className={styles.footer__title}>букет</h3>
+					<div className={styles.block}>
+						<h3 className={styles.title}>букет</h3>
 						<ul>
 							<li>
 								<Link to={'/'}>для девушки</Link>
@@ -106,46 +101,43 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className={styles.footer__block}>
-						<Link to={'/'} className={styles.footer__title}>
+					<div className={styles.block}>
+						<Link to={'/'} className={styles.title}>
 							доставка и оплата
 						</Link>
-						<Link to={'/'} className={styles.footer__title}>
+						<Link to={'/'} className={styles.title}>
 							о нас
 						</Link>
-						<Link to={'/'} className={styles.footer__title}>
+						<Link to={'/'} className={styles.title}>
 							FAQ
 						</Link>
-						<Link to={'/'} className={styles.footer__title}>
+						<Link to={'/'} className={styles.title}>
 							контакты
 						</Link>
-						<Link to={'/'} className={styles.footer__title}>
+						<Link to={'/'} className={styles.title}>
 							для корпоративных клиентов
 						</Link>
 					</div>
-					<div className={styles.footer__block}>
+					<div className={styles.block}>
 						<div className={styles.description}>
-							<a
-								href='mailto:zakaz@loverflower.by'
-								className={styles.footer__title}
-							>
+							<a href='mailto:zakaz@loverflower.by' className={styles.title}>
 								zakaz@loverflower.by
 							</a>
 							<p> Доставка 24/7 по договоренности с оператором</p>
 						</div>
 						<div className={styles.description}>
-							<h3 className={styles.footer__title}>ул. Тимирязева 67</h3>
+							<h3 className={styles.title}>ул. Тимирязева 67</h3>
 							<p className={styles.description__time}>
 								10:00 до 21:00 без выходных
 							</p>
 						</div>
 						<div className={styles.description}>
-							<a href='tel:+375291136969' className={styles.footer__title}>
+							<a href='tel:+375291136969' className={styles.title}>
 								+375 (29) 113-69-69
 							</a>
 							<p>прием звонков круглосуточно</p>
 						</div>
-						<div className={styles.description__social}>
+						<div className={styles.social}>
 							<Link to={'/'} className={styles.link}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'

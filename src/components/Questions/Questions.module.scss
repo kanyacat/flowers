@@ -1,4 +1,5 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
 
 .root {
 	position: relative;
@@ -8,7 +9,7 @@
 
 	background: #0f2222;
 
-	z-index: -2;
+	z-index: 1;
 
 	&:before {
 		position: absolute;
@@ -73,18 +74,19 @@
 	}
 
 	.head {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
 
 		.title {
+			grid-column: 1 / 7;
 			span {
 				margin-left: 80px;
 			}
 		}
 
 		.text {
-			width: 40%;
+			grid-column: 10 /13;
+			max-width: 255px;
 
 			.line {
 				display: block;
@@ -99,17 +101,21 @@
 	}
 
 	.form {
-		margin-left: 60%;
+		@include grid;
 		form {
+			grid-column: 8/13;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			max-width: 445px;
+			width: 100%;
 
 			input {
 				margin-bottom: 10px;
 				padding: 20px;
 
-				width: 90%;
+				width: 100%;
+				max-width: 445px;
 			}
 
 			button {

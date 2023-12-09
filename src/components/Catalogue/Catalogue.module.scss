@@ -3,10 +3,9 @@
 .root {
 	position: relative;
 	margin-top: 50px;
+	overflow: hidden;
 
 	padding-bottom: 223px;
-
-	//overflow: hidden;
 
 	&:before {
 		position: absolute;
@@ -46,13 +45,44 @@
 		z-index: -1;
 	}
 
+	.backtext {
+		span {
+			position: absolute;
+
+			color: #0a1717;
+			font-size: 200px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 8px;
+			text-transform: uppercase;
+
+			z-index: -2;
+
+			&:nth-child(1) {
+				bottom: 63%;
+				right: -13%;
+			}
+
+			&:nth-child(2) {
+				bottom: 30%;
+				left: -2%;
+			}
+
+			&:nth-child(3) {
+				bottom: 20%;
+				left: 50%;
+			}
+		}
+	}
+
 	h1 {
 		margin-bottom: 10px;
 	}
 
 	.text {
 		width: 50%;
-		margin-left: 100px;
+		margin-left: 1%;
 		margin-bottom: 50px;
 
 		font-family: Oswald, serif;
@@ -63,8 +93,7 @@
 		letter-spacing: 0.4px;
 
 		p {
-			width: 90%;
-
+			max-width: 540px;
 			margin-bottom: 30px;
 		}
 	}
@@ -78,37 +107,6 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: flex-start;
-
-		.backtext {
-			span {
-				position: absolute;
-
-				color: #0a1717;
-				font-size: 200px;
-				font-style: normal;
-				font-weight: 700;
-				line-height: normal;
-				letter-spacing: 8px;
-				text-transform: uppercase;
-
-				z-index: -2;
-
-				&:nth-child(1) {
-					bottom: 60%;
-					right: 0;
-				}
-
-				&:nth-child(2) {
-					bottom: 20%;
-					left: -2%;
-				}
-
-				&:nth-child(3) {
-					bottom: 0;
-					left: 45%;
-				}
-			}
-		}
 	}
 
 	.card {
@@ -116,7 +114,7 @@
 
 		max-width: 520px;
 		padding: 30px;
-		margin-top: 30px;
+		margin-bottom: 30px;
 
 		border-radius: 20px;
 		background: rgba(0, 0, 0, 0.2);
@@ -129,39 +127,37 @@
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 
+		&:nth-child(2) {
+			width: 40%;
+			max-width: 430px;
+			min-height: 281px;
+		}
+
 		&:nth-child(3) {
-			width: 30%;
-
+			width: 40%;
+			max-width: 580px;
 			min-height: 221px;
-
-			margin-right: 50px;
 		}
 
 		&:nth-child(4) {
-			width: 32%;
-
-			margin-top: -30px;
-
+			width: 40%;
+			max-width: 580px;
 			min-height: 225px;
-
-			margin-left: 50px;
-		}
-
-		&:nth-child(5) {
-			width: 35%;
-
-			min-height: 190px;
-			margin-right: 50px;
 		}
 
 		h2 {
-			width: 70%;
+			width: 80%;
 
 			margin-left: 29px;
+			margin-bottom: 20px;
 
 			color: $accent-color;
 			font-size: 30px;
 			font-weight: 700;
+		}
+
+		ul {
+			margin-left: 29px;
 		}
 
 		.link {
