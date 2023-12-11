@@ -1,4 +1,5 @@
 @import 'src/scss/vars';
+@import '/src/scss/mixins';
 
 .root {
 	position: absolute;
@@ -10,15 +11,11 @@
 	z-index: 100;
 
 	.list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flex-all-sb;
 
 		.left,
 		.right {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			@include flex-all-sb;
 		}
 
 		nav {
