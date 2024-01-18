@@ -2,7 +2,7 @@
 @import '/src/scss/mixins';
 
 .root {
-	position: absolute;
+	//position: absolute;
 	width: 100%;
 	margin: 0 auto;
 
@@ -11,16 +11,32 @@
 	z-index: 100;
 
 	.list {
-		@include flex-all-sb;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		gap: 100px;
 
-		.left,
+		text-align: center;
+		align-items: center;
+
+		.left {
+			display: grid;
+			align-items: center;
+			grid-template-columns: repeat(7, auto);
+			gap: 50px;
+
+			@include mobile {
+				display: none;
+			}
+		}
+
 		.right {
-			@include flex-all-sb;
+			display: grid;
+			align-items: center;
+			grid-template-columns: repeat(2, auto);
+			gap: 30px;
 		}
 
 		nav {
-			margin-right: 50px;
-
 			span {
 				margin-right: 10px;
 				path {
@@ -52,6 +68,23 @@
 
 					background: url('https://svgur.com/i/zBm.svg');
 				}
+
+				@include for-desktop() {
+					display: none;
+				}
+			}
+		}
+		@include for-desktop() {
+			grid-template-columns: auto 50px;
+			gap: 30px;
+
+			.left {
+				gap: 10px;
+			}
+
+			.right {
+				grid-template-columns: 1fr;
+				gap: 0;
 			}
 		}
 	}

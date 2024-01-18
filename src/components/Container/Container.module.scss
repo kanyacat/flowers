@@ -1,7 +1,13 @@
 @import '/src/scss/vars';
+@import '/src/scss/mixins';
+
 .root {
 	margin: 0 auto;
 
 	padding: 0 $container-offset;
 	max-width: $container-width;
+
+	@include small-tablet {
+		padding: 0 40px;
+	}
 }
