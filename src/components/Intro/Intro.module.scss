@@ -4,8 +4,7 @@
 .main {
 	padding-top: 70px;
 	position: relative;
-	//ПОДГОНЯТЬ ВЫСОТУ ПОД ВЫСОТУ ЭКРАНА
-	min-height: 120vh;
+	min-height: 130vh;
 
 	background: no-repeat url('https://i.ibb.co/y54QgSq/image-100.png')
 		center/cover;
@@ -31,6 +30,10 @@
 		filter: blur(125px);
 
 		z-index: 1;
+
+		@include mobile {
+			left: -30%;
+		}
 	}
 
 	&:before {
@@ -79,6 +82,7 @@
 
 	.content {
 		position: relative;
+		height: 100%;
 
 		@include flex-column;
 		justify-content: center;
@@ -86,31 +90,59 @@
 		text-align: center;
 
 		h1 {
-			margin: 80px 0;
+			margin: 70px 0;
 
 			font-family: Cormorant, serif;
-			font-size: 200px;
+			font-size: 180px;
 			font-style: normal;
 			font-weight: 300;
 			line-height: normal;
 			letter-spacing: 40px;
 			text-transform: uppercase;
+
+			@include tablet {
+				font-size: 100px;
+				letter-spacing: 20px;
+			}
+
+			@include mobile {
+				font-size: 50px;
+				letter-spacing: 5px;
+
+				margin: -50px 0;
+			}
 		}
 
-		span {
+		.subtitle {
 			position: absolute;
-			top: 60%;
-			left: 0;
+			top: 65%;
+			left: -3%;
+
+			margin: 0;
+
+			@include mobile {
+				bottom: 60%;
+				left: 10%;
+			}
+		}
+
+		.text {
+			position: absolute;
+			top: 120%;
+			left: 25%;
 
 			z-index: 10;
 
-			h1 {
-				margin: 0;
+			@include tablet {
+				left: 0;
 			}
 
-			.text {
-				margin-bottom: 47px;
+			@include mobile {
+				top: 120vh;
+				padding-bottom: 50px;
+			}
 
+			.info {
 				font-family: Oswald, serif;
 				font-size: $subtitle-size;
 				font-style: normal;
@@ -119,6 +151,14 @@
 				letter-spacing: 0.4px;
 
 				text-transform: none;
+
+				p {
+					margin-bottom: 47px;
+
+					@include mobile {
+						margin-bottom: 20px;
+					}
+				}
 			}
 		}
 	}
@@ -135,6 +175,10 @@
 		text-align: right;
 
 		z-index: 101;
+
+		@include small-tablet {
+			display: none;
+		}
 
 		&Block {
 			margin-bottom: 30px;
