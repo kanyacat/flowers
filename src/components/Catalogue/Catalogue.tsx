@@ -25,38 +25,38 @@ const Catalogue = () => {
 					<div className={styles.card}>
 						<h2>готовые букеты из сухоцветов</h2>
 						<ul>
-							<li>букеты</li>
-							<li>для интерьера</li>
-							<li>Композиции</li>
+							<li className={styles.list}>букеты</li>
+							<li className={styles.list}>для интерьера</li>
+							<li className={styles.list}>Композиции</li>
+							<Link to={'/'} className={styles.link}>
+								смотреть каталог
+							</Link>
 						</ul>
-						<Link to={'/'} className={styles.link}>
-							смотреть каталог
-						</Link>
 					</div>
 					<div className={styles.card}>
 						<h2>Цветы</h2>
 						<ul>
-							<li>Сборные букеты</li>
-							<li>Монобукеты</li>
-							<li>Композиции из цветов</li>
-							<li>розы</li>
-							<li>свадебные</li>
+							<li className={styles.list}>Сборные букеты</li>
+							<li className={styles.list}>Монобукеты</li>
+							<li className={styles.list}>Композиции из цветов</li>
+							<li className={styles.list}>розы</li>
+							<li className={styles.list}>свадебные</li>
+							<Link to={'/'} className={styles.link}>
+								смотреть каталог
+							</Link>
 						</ul>
-						<Link to={'/'} className={styles.link}>
-							смотреть каталог
-						</Link>
 					</div>
 					<div className={styles.card}>
 						<h2>дополнительно</h2>
 						<ul>
-							<li>шары</li>
-							<li>игрушки</li>
-							<li>открытки</li>
-							<li>упаковка</li>
+							<li className={styles.list}>шары</li>
+							<li className={styles.list}>игрушки</li>
+							<li className={styles.list}>открытки</li>
+							<li className={styles.list}>упаковка</li>
+							<Link to={'/'} className={styles.link}>
+								смотреть каталог
+							</Link>
 						</ul>
-						<Link to={'/'} className={styles.link}>
-							смотреть каталог
-						</Link>
 					</div>
 				</div>
 			</Container>

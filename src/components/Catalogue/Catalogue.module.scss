@@ -75,16 +75,29 @@
 				left: 50%;
 			}
 		}
+
+		@include small-tablet {
+			display: none;
+		}
 	}
 
 	h1 {
 		margin-bottom: 10px;
+
+		@include small-tablet {
+			margin-top: 100px;
+			font-size: 60px;
+			text-align: center;
+		}
+
+		@include mobile {
+			font-size: 40px;
+		}
 	}
 
 	.text {
-		width: 50%;
-		margin-left: 1%;
-		margin-bottom: 50px;
+		margin-left: 10%;
+		margin-top: 10px;
 
 		font-family: Oswald, serif;
 		font-size: $subtitle-size;
@@ -94,8 +107,15 @@
 		letter-spacing: 0.4px;
 
 		p {
-			max-width: 540px;
 			margin-bottom: 30px;
+		}
+
+		@include tablet {
+			margin-left: 0;
+		}
+
+		@include mobile {
+			display: none;
 		}
 	}
 
@@ -104,10 +124,19 @@
 
 		position: relative;
 
-		@include flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		justify-content: space-around;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			gap: 40px;
+
+			max-width: none;
+			min-width: 100%;
+
+			text-align: center;
+		}
 	}
 
 	.card {
@@ -129,36 +158,69 @@
 		text-transform: uppercase;
 
 		&:nth-child(2) {
-			width: 40%;
 			max-width: 430px;
-			min-height: 281px;
+			height: 281px;
 		}
 
 		&:nth-child(3) {
-			width: 40%;
-			max-width: 580px;
-			min-height: 221px;
+			height: 310px;
 		}
 
 		&:nth-child(4) {
-			width: 40%;
-			max-width: 580px;
-			min-height: 225px;
+			height: 264px;
+			margin-top: 70px;
+
+			@include tablet {
+				margin-top: 0;
+			}
 		}
 
 		h2 {
-			width: 80%;
-
 			margin-left: 29px;
 			margin-bottom: 20px;
 
 			color: $accent-color;
 			font-size: 30px;
 			font-weight: 700;
+
+			@include tablet {
+				margin-left: 0;
+			}
+
+			@include mobile {
+				font-size: $subtitle-size;
+			}
 		}
 
 		ul {
 			margin-left: 29px;
+
+			.list {
+				margin-bottom: 4px;
+
+				font-size: 18px;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.72px;
+
+				list-style-position: inside;
+
+				@include tablet {
+					margin-bottom: 6px;
+
+					&:nth-last-child(2) {
+						margin-bottom: 30px;
+					}
+				}
+
+				@include mobile {
+					font-size: $second-size;
+				}
+			}
+
+			@include tablet {
+				margin-left: 0;
+			}
 		}
 
 		.link {
@@ -172,6 +234,22 @@
 			font-weight: 700;
 
 			text-decoration-line: underline;
+
+			@include tablet {
+				position: static;
+				margin-top: 50px;
+			}
+		}
+
+		@include tablet {
+			min-width: 100%;
+			max-width: none;
+
+			font-size: 14px;
+
+			margin: 0;
+
+			height: auto !important;
 		}
 	}
 }
