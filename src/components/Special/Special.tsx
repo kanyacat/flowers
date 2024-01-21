@@ -13,7 +13,9 @@ const Special = () => {
 						</div>
 					</div>
 					<img
-						src='https://s3-alpha-sig.figma.com/img/02db/7013/fd5523f6b408e680317412d52e929838?Expires=1702857600&Signature=l6QQ2Iri0sqylpiNDCvgUNIFAh9ZZaE63hcUgkcNU~ls7Hj0uAMUBPSaq5~H4Pe92ceeWFR-WE5L3ts6LpxeeIgajp1H8~FtAgVZt2p4bmezsDKgzplEby7S2mvsp9uzfHJ7uJNePKx2Lu7pQCicNorFUlSQBMqgQuiiVC81M38S9M6SrWlXE0ZRNEFmb6qeHgYW3N6iCBI95PBAoqEnTPqMzG2CPrizgaHfTDCrquzqirjYia4RlUqnmO4hpYhyy~aLl3B4hB9U~rQMpexxvzbEOi6HhwgnxGD6YeRkvMDAh80MKcNuuST9nifmjGyXy2BYIv0tFYk0FlzIlziZ7A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+						src='https://i.ibb.co/ydrmj55/fd5523f6b408e680317412d52e929838.png'
+						srcSet={'https://i.ibb.co/YRgB0hN/Rectangle-36.png 2x'}
+						loading={'lazy'}
 						alt='подарок'
 					/>
 				</div>
@@ -35,20 +37,26 @@ const Special = () => {
 					</div>
 					<img
 						src={
-							'https://s3-alpha-sig.figma.com/img/270f/af1b/ddbca443f443e043f72b2e59a2691ffa?Expires=1702857600&Signature=UVoJBr7PZG5Qu283s7TjC1ttz2e0SWTx8MO6JpxcELO3dJeo5UUrHJmlbT8YftKLNEHhAK2m1dFXyxe5aiTwN7LJjZa9nITbIDMsiAdmjMrXsBimXZzo-E26aBXiG6t-cip3O0JuwhsbonmNM4lVyfqp2HEs2f2OCuUrMKyvoDKEORFoq6aiqriWNNRSRXwDeeKf6KFWUJHCx8yhrqt3Ced04DQhL2PJ5vKDfvhiTreTiuU2cnFxNNux9qh8xWTjy~yuHHh5tkbH3QvGuMgy0iQJJ--3lxa9AGgZuDvBZiEY7LhbhiGRDMMsrV2O6mz62ewVUV5ExcbiGVYryPy84A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							'https://i.ibb.co/6v4th8x/ddbca443f443e043f72b2e59a2691ffa.png'
 						}
+						srcSet={'https://i.ibb.co/VDTf9C9/Rectangle-35.png 2x'}
+						loading={'lazy'}
 						alt='букет'
 					/>
 					<img
 						src={
-							'https://s3-alpha-sig.figma.com/img/d3ea/179e/1cf0892bead7678559fb3130fe1af287?Expires=1702857600&Signature=eVhTzfhcAmjjbwEtq9ANQdpxYMULbWyV0nIlr1Ac8SM3pyQ5zs8S-5brEVNAaN9V82ZA0XZ0CMUwNYhwS~e-b~kOBNaGCFe2q-ZbJkxYeH2e5ieZZLWsyxR7-vUbHcgZgoIzfUQVLV4DdzH6UF46UjKg5xgsDP8p208s9XBwyBWIRKpUR9sDamH8DfRMTxDQzXnMA5dvqSzBmT4Dj931AP38wAejso1Meyj4gngmn61eACDgPVK7cGKaCcxoCmrctI1pqYVwdz04XjjrVYRl9r-omLcgEkuccanRPoXGRUOBQHooOaZC5xeyAvBEBVzIrl08YQA6PVnZHf1l2N1CKA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							'https://i.ibb.co/JpQJ0Km/1cf0892bead7678559fb3130fe1af287.png'
 						}
+						srcSet={'https://i.ibb.co/D7qrkNR/Rectangle-38-1.png 2x'}
+						loading={'lazy'}
 						alt='записка'
 					/>
 					<img
 						src={
-							'https://s3-alpha-sig.figma.com/img/1b6c/7602/6437783e0fe717d1fb52844dd04b9622?Expires=1702857600&Signature=LEp7HILwTwfwJdPstkE9~axyU6~VETPtwci2RhaVW9WS3chiyXmwZbhMfHxipMdc21b1xGrurd2VVhde5-TLdz8mK88M63pf4KWrYdu~e2yhcH017tbIgkCh90--TPLoc1As7397F~OxGCsZMtkj2EqRoU74RsyUGLmWE7otENouC7bD1ejA2sYKBEh2MzEBrnFvy5mQGxQ1z5wBbpPGvfqJo8xS5A6fypNViku3j8Ta~Zw5PF0oxQq~6yvn7fIoJwNTYQG5LaYOKN1hUhsvMT4lrUX0s7~qpmLTvy-GxYQGndSacMfPpsQz1-TEgGkzm0J917Fhipe3xU7LnF71fg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							'https://i.ibb.co/JzRvRN2/6437783e0fe717d1fb52844dd04b9622.png'
 						}
+						srcSet={'https://i.ibb.co/4J1Q4RT/Rectangle-37.png 2x'}
+						loading={'lazy'}
 						alt='венок'
 					/>
 				</div>

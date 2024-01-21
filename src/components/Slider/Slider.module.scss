@@ -7,7 +7,6 @@
 
 .swiper {
 	margin: 0 65px;
-	//width: 80%;
 }
 
 .img {
@@ -75,13 +74,13 @@
 	}
 
 	button {
-		padding: 16px 76px;
+		padding: 16px 50px;
 
 		border: 0.5px solid $light-color;
 		background: transparent;
 
 		color: $light-color;
-		font-size: $main-size;
+		font-size: $second-size;
 		font-style: normal;
 		font-weight: 700;
 		line-height: normal;
@@ -126,14 +125,14 @@
 
 	.next {
 		position: absolute;
-		right: -30px;
+		right: -10px;
 
 		cursor: pointer;
 	}
 
 	.prev {
 		position: absolute;
-		left: -30px;
+		left: -10px;
 
 		cursor: pointer;
 	}

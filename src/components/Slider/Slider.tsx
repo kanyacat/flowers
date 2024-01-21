@@ -14,7 +14,7 @@ const Slider = () => {
 					<div className='swiper-button image-swiper-button-next'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							width='80'
+							width='60'
 							height='6'
 							viewBox='0 0 80 6'
 							fill='none'
@@ -30,7 +30,7 @@ const Slider = () => {
 					<div className='swiper-button image-swiper-button-prev'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							width='100'
+							width='60'
 							height='6'
 							viewBox='0 0 80 6'
 							fill='none'
@@ -63,7 +63,9 @@ const Slider = () => {
 							</span>
 							<img
 								className={styles.img}
-								src='https://i.ibb.co/X5ZG0MB/image-114-3.png'
+								src='https://i.ibb.co/X5ZG0MB/image-114-3.png 1x'
+								srcSet={'https://i.ibb.co/j6sN2C4/image-114.png 2x'}
+								loading={'lazy'}
 								alt='букет'
 							/>
 						</div>
@@ -76,6 +78,8 @@ const Slider = () => {
 						<img
 							className={styles.img}
 							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
+							srcSet={'https://i.ibb.co/pLwPHds/image-114-2.png 2x'}
+							loading={'lazy'}
 							alt='букет'
 						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
@@ -90,6 +94,8 @@ const Slider = () => {
 						<img
 							className={styles.img}
 							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
+							srcSet={'https://i.ibb.co/ZB5QcSV/image-114-3.png 2x'}
+							loading={'lazy'}
 							alt='букет'
 						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
@@ -101,6 +107,8 @@ const Slider = () => {
 						<img
 							className={styles.img}
 							src='https://i.ibb.co/X5ZG0MB/image-114-3.png'
+							srcSet={'https://i.ibb.co/j6sN2C4/image-114.png 2x'}
+							loading={'lazy'}
 							alt='букет'
 						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
@@ -112,6 +120,8 @@ const Slider = () => {
 						<img
 							className={styles.img}
 							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
+							srcSet={'https://i.ibb.co/pLwPHds/image-114-2.png 2x'}
+							loading={'lazy'}
 							alt='букет'
 						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
@@ -123,6 +133,8 @@ const Slider = () => {
 						<img
 							className={styles.img}
 							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
+							srcSet={'https://i.ibb.co/ZB5QcSV/image-114-3.png 2x'}
+							loading={'lazy'}
 							alt='букет'
 						/>
 						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>

@@ -11,19 +11,35 @@ const Inst = () => {
 				<div className={styles.inst}>
 					<div className={styles.photo}>
 						<img
-							src='https://s3-alpha-sig.figma.com/img/02ff/a6b6/c7eed136e8c838ca0db681afa5ec7d37?Expires=1702857600&Signature=cm0Ux4zPFfNcbtAahfq72VrlhFDxNwGlqPa8b8FvwTtduN19-ug1nGBPL8a6Pj672lnkM-m-XkZcm7KvvnVjfE1zl31psVb0ol~EY-boq~fsKSHdq3rwkGgIwBzX37OPF6F5WHGUeV~AnPZyR2M0bLvOISW6Wqodw8AZMo8ZjjbTPoT5AhoA48eKdhiWf2XH8~VaA8DBY-Wfnfpnca7qQflX7PsWrwXzni8QbCiO5HlhdpYA9mN-Iq-IuAHuNgc~QQ-wdxmor5by0pOG44muDwbBo6KgDF3H1R4E1s41hdodajBRe-sP0Ts0CbpX1N-aKa5Z8ycmz2TDx9rHmF58sA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							src={
+								'https://i.ibb.co/vQNLTyR/c7eed136e8c838ca0db681afa5ec7d37.png'
+							}
+							srcSet={'https://i.ibb.co/L1hcf9C/Rectangle-44-1.png 2x'}
+							loading={'lazy'}
 							alt='ёлочка'
 						/>
 						<img
-							src='https://s3-alpha-sig.figma.com/img/2576/59d4/737e506895fbf964ca1c64eb32bf7a3d?Expires=1702857600&Signature=R4fiN0D-Wu2lsA8DAxd~rOhUS0cbiXdUf6PNDClhM~pa2tIslkBz002L0hPyzSIhWuwIvmOHq3LL2TZ~77nxL0d9Rsg7OY-n37NqQUMCCtL5BxpT~zTjHuL3uWKe4tzNnIzcrKyPIW5E1oKQB~CZdFn8mn~OcFOdRk195dT8KZfA2x~T3gRGEqiY6Mxk-PlWfggUe-I8TfxTobmJJYqHDrwSjo3BO6-WxEOZuJ5xpOFY2ZDgT8RE~pfo-yhomC5vY~n656o72MEjWiU4Wl0103wjMHxbSUYt20SPLJ3qvJG-O63u92zSxbfD0WFxkb1aHlaqk-EXoZW7lXZvclPRxg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							src={
+								'https://i.ibb.co/ygKLj5G/737e506895fbf964ca1c64eb32bf7a3d.png'
+							}
+							srcSet={'https://i.ibb.co/JFMHJpD/Rectangle-45-1.png 2x'}
+							loading={'lazy'}
 							alt='букет-ёлка'
 						/>
 						<img
-							src='https://s3-alpha-sig.figma.com/img/6bf1/cf7d/1c8914cae6d460c6ba629167278304dd?Expires=1702857600&Signature=M8OsoWWiqUc99PbbjSHMwLdCdTozGmhEDENrxcRGWJjQy2pbHqay8fjRhWZl03X3MZBSVHKFHn3H~9YAfvjTUlrUlynG69sZqWtgCQ8~Oaeh~sHG~vg47FcLj6~t~NOVq4BPLalRi8seBzFFDyh8mPpU2nrq9yIcCjIOcU4~STheGFtZwJ9ctv~RXmKrRUypunMi06HCeIgXFFF0vmcaP4k1pgWadYK2JzupkSfPChQqF5ygAylgaxUvH2BGxUI3Rz06wVXsSjgihL8ZA8tTsY~5nq0-pq9lHoV45JfoMuV0psN3CVQucq3jEY1Mp3qeVM1GCQYdBqd6X96E25NyLg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							src={
+								'https://i.ibb.co/MZkgg4g/1c8914cae6d460c6ba629167278304dd.png'
+							}
+							srcSet={'https://i.ibb.co/zhRBDhW/Rectangle-46-1.png 2x'}
+							loading={'lazy'}
 							alt='свечки'
 						/>
 						<img
-							src='https://s3-alpha-sig.figma.com/img/283b/5de4/00379419340f32647c4044263a074534?Expires=1702857600&Signature=YqQWno6TppjnYNIjPcaXh2mepGMVVYuRpzEPxOV5IMuE3C3tY2nIVBrwFW3n-HCj8HfPzdDWT4b8bHete1YrfoG9PpGcI9iUC9gc-IidBMqeqF1MdreLitfS3pUExXR6Q8blZIpLRfOcBxn4ImXD5NLyJ5sXokk~tFJuFZx4UJD4cCeE42X4Ve44ZW9SK-wgkAKDLJBrk52Ri3mwMjZXaGo4O~XZCIz4ThTBmf93mT22V8ER7TwFfvAxktqe1y3E-8eWAABi~rGg9uOYCrCLWAABBfaG79xdl0cqkrjTMR40HN9i8QkemHZiZYkpz7JK8cxG02A29xLKcPDRCSD~4Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+							src={
+								'https://i.ibb.co/KD26phZ/00379419340f32647c4044263a074534.png'
+							}
+							srcSet={'https://i.ibb.co/k3GbdHC/Rectangle-47-1.png 2x'}
+							loading={'lazy'}
 							alt='золотой букет'
 						/>
 					</div>
@@ -31,6 +47,7 @@ const Inst = () => {
 						<img
 							src='https://i.ibb.co/R6S3hd5/Component-1-1.png'
 							alt='our social'
+							loading={'lazy'}
 						/>
 						<div className={styles.socialBtn}>
 							<Link to={'/'} className={styles.socialLink}>

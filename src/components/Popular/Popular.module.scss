@@ -1,4 +1,5 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
 
 .root {
 	position: relative;
@@ -32,7 +33,7 @@
 
 		content: '';
 		top: 60%;
-		left: 40%;
+		right: 15%;
 
 		width: 571.277px;
 		height: 396.429px;
