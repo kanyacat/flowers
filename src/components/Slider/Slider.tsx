@@ -45,7 +45,14 @@ const Slider = () => {
 			</div>
 
 			<Swiper
-				slidesPerView={3}
+				breakpoints={{
+					768: {
+						slidesPerView: 2
+					},
+					1024: {
+						slidesPerView: 3
+					}
+				}}
 				spaceBetween={30}
 				navigation={{
 					nextEl: '.image-swiper-button-next',

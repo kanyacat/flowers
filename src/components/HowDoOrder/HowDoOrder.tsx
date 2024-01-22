@@ -35,7 +35,7 @@ const HowDoOrder = () => {
 					</div>
 					<div className={styles.column}>
 						<div className={styles.steps}>
-							<div className={styles.step}>
+							<div className={styles.step} style={{ marginLeft: 0 }}>
 								<h3>4 шаг</h3>
 								<p>
 									Один из наших курьеров или партнёров доставит ваш заказ по
@@ -43,7 +43,7 @@ const HowDoOrder = () => {
 									только заказ будет доставлен
 								</p>
 							</div>
-							<div className={styles.step}>
+							<div className={styles.step} style={{ marginLeft: 0 }}>
 								<h3>5 шаг</h3>
 								<p>
 									Наслаждайтесь цветами, если вы заказали их для дома или

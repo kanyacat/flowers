@@ -2,20 +2,26 @@
 @import 'src/scss/mixins';
 
 .root {
+	margin-top: 20px;
 	position: relative;
 
 	margin-bottom: 100px;
 
-	background: url('https://i.ibb.co/84K5dR2/image-115.png') no-repeat right 25px;
+	background: url('https://i.ibb.co/84K5dR2/image-115.png') no-repeat right 25px
+		transparent;
 
 	background-size: 974px 748px;
+
+	@include small-tablet {
+		background: transparent;
+	}
 
 	&:before {
 		position: absolute;
 
 		content: '';
 		top: 40%;
-		left: 0;
+		left: -5%;
 
 		width: 413.998px;
 		height: 661.887px;
@@ -26,6 +32,14 @@
 
 		filter: blur(125px);
 		z-index: -1;
+
+		@include tablet {
+			left: -40%;
+		}
+
+		@include mobile {
+			width: 313.998px;
+		}
 	}
 
 	&:after {
@@ -33,7 +47,7 @@
 
 		content: '';
 		top: 60%;
-		right: 15%;
+		left: 15%;
 
 		width: 571.277px;
 		height: 396.429px;
@@ -44,12 +58,45 @@
 		filter: blur(125px);
 
 		z-index: -1;
+
+		@include tablet {
+			top: -20%;
+			right: 30%;
+			width: 271.277px;
+		}
+
+		@include mobile {
+			width: 171.277px;
+		}
 	}
 
 	.title {
 		margin-bottom: 10px;
 		.subtitle {
-			margin-left: 380px;
+			margin-left: 30%;
+		}
+
+		@include tablet {
+			h1 {
+				font-size: 80px;
+			}
+		}
+
+		@include small-tablet {
+			h1 {
+				font-size: 50px;
+			}
+		}
+
+		@include mobile {
+			text-align: center;
+			h1 {
+				font-size: 40px;
+			}
+
+			.subtitle {
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -61,10 +108,19 @@
 		letter-spacing: 0.4px;
 
 		text-align: center;
+
+		@include small-tablet {
+			margin-bottom: 20px;
+		}
+
+		@include mobile {
+			text-align: right;
+			font-size: $second-size;
+		}
 	}
 
 	.slider {
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 	}
 
 	.link {

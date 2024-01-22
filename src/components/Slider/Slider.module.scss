@@ -52,6 +52,7 @@
 }
 
 .info {
+	display: block;
 	@include flex-column;
 
 	align-items: center;
