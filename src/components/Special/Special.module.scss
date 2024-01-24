@@ -33,38 +33,66 @@
 		backdrop-filter: blur(10px);
 	}
 
-	.head {
-		@include flex-all-sb;
+	.special {
+		margin-bottom: 30px;
+		@include grid;
+		gap: 30px;
+		grid-template-rows: repeat(2, auto);
+
 		.title {
+			grid-column: 1/6;
+
 			&Bottom {
-				margin-left: 45px;
-
-				@include flex-v-center;
-			}
-
-			.line {
-				margin-right: 30px;
-
-				display: block;
-
-				width: 255px;
-				height: 1px;
-				flex-shrink: 0;
-
-				background: $second-color;
+				position: relative;
+				margin-left: 100%;
 			}
 		}
-	}
 
-	.bottom {
-		margin-bottom: 40px;
+		.line {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			margin-right: 30px;
 
-		@include flex-all-sb;
+			display: block;
+
+			width: 205px;
+			height: 1px;
+			flex-shrink: 0;
+
+			background: $second-color;
+		}
+
+		.box {
+			grid-column: 10/12;
+		}
+
+		.flowers,
+		.note,
+		.wreath {
+			grid-row: 2/2;
+		}
+
+		.flowers {
+			grid-column: 7/8;
+		}
+
+		.note {
+			grid-column: 8/10;
+			width: 160px;
+		}
+
+		.wreath {
+			grid-column: 10/12;
+		}
 
 		.info {
 			margin-left: 45px;
 
-			width: 25%;
+			grid-column: 1/6;
+			grid-row: 2/2;
+
+			width: 100%;
 
 			p {
 				margin-bottom: 40px;
@@ -76,11 +104,39 @@
 				}
 			}
 		}
+
 		img {
 			height: 292px;
+		}
 
-			&:nth-child(3) {
+		@include for-desktop {
+			img {
 				width: 160px;
+			}
+		}
+
+		@include tablet {
+			.info {
+				grid-column: 1/11;
+				width: 100%;
+
+				p {
+					margin-bottom: 20px;
+				}
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		@include small-tablet {
+			h1 {
+				font-size: 40px;
+			}
+
+			.line {
+				width: 25vw;
 			}
 		}
 	}

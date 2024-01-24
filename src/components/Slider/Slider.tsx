@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-// import 'swiper/css/navigation'
 import styles from './Slider.module.scss'
 import './Slider.module.scss'
+import { ReactComponent as ArrowLeft } from './arrow2.svg'
+import { ReactComponent as ArrowRight } from './arrow1.svg'
 
 import { Navigation } from 'swiper/modules'
 
@@ -12,34 +13,12 @@ const Slider = () => {
 			<div className={styles.arrows}>
 				<div className={styles.next}>
 					<div className='swiper-button image-swiper-button-next'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='60'
-							height='6'
-							viewBox='0 0 80 6'
-							fill='none'
-						>
-							<path
-								d='M80 3L75 0.113249V5.88675L80 3ZM0 3.5L75.5 3.5V2.5L0 2.5L0 3.5Z'
-								fill='#43FFD2'
-							/>
-						</svg>
+						<ArrowRight />
 					</div>
 				</div>
 				<div className={styles.prev}>
 					<div className='swiper-button image-swiper-button-prev'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							width='60'
-							height='6'
-							viewBox='0 0 80 6'
-							fill='none'
-						>
-							<path
-								d='M0 2.99999L5 5.88674L5 0.113242L0 2.99999ZM80 2.5L4.5 2.49999L4.5 3.49999L80 3.5L80 2.5Z'
-								fill='#43FFD2'
-							/>
-						</svg>
+						<ArrowLeft />
 					</div>
 				</div>
 			</div>
