@@ -7,7 +7,7 @@
 	padding-top: 22px;
 	padding-bottom: 52px;
 
-	background: #0f2222;
+	background-color: #0f2222;
 
 	z-index: 1;
 
@@ -27,6 +27,15 @@
 
 		filter: blur(125px);
 		z-index: -1;
+
+		@include mobile {
+			width: 105.699px;
+			height: 123.479px;
+			filter: blur(50px);
+
+			left: 60%;
+			top: 150px;
+		}
 	}
 
 	&:after {
@@ -45,6 +54,14 @@
 		filter: blur(125px);
 
 		z-index: -2;
+
+		@include mobile {
+			width: 179.741px;
+			height: 184.443px;
+			filter: blur(50px);
+
+			left: 20%;
+		}
 	}
 
 	.leaves {
@@ -57,6 +74,29 @@
 		background-size: 691.885px 1037.827px;
 
 		z-index: -1;
+
+		@include tablet {
+			background-position: right top;
+
+			right: 0;
+			top: -10%;
+
+			width: 591.885px;
+			height: 737.827px;
+
+			background-size: 591.885px 737.827px;
+
+			transform: scaleX(-1);
+		}
+
+		@include mobile {
+			width: 252.365px;
+			height: 378.547px;
+
+			top: 0;
+
+			background-size: 252.365px 378.547px;
+		}
 	}
 
 	.have {
@@ -71,31 +111,93 @@
 		left: 35%;
 
 		z-index: 2;
+
+		@include tablet {
+			background-size: 205px 205px;
+
+			top: 220px;
+			left: 20%;
+		}
+
+		@include mobile {
+			width: 135px;
+			height: 135px;
+
+			background-size: 135px 135px;
+			top: 120px;
+			left: 35%;
+		}
 	}
 
 	.head {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
+		gap: 70px;
+
+		@include tablet {
+			grid-template-columns: repeat(1, 1fr);
+		}
 
 		.title {
-			grid-column: 1 / 7;
+			grid-column: 1 / 8;
 			span {
 				margin-left: 80px;
+			}
+
+			@include tablet {
+				font-size: 80px;
+			}
+
+			@include mobile {
+				font-size: 50px;
+			}
+
+			@include tablet {
+				grid-column: 1;
+				span {
+					margin-left: 0;
+				}
 			}
 		}
 
 		.text {
-			grid-column: 10 /13;
+			grid-column: 9 / 13;
 			max-width: 255px;
+			width: 100%;
 
 			.line {
 				display: block;
 				margin: 53px 0;
 
-				width: 255px;
+				min-width: 255px;
+				width: 100%;
 				height: 1px;
 
 				background: $accent-color;
+
+				@include tablet {
+					min-width: 100px;
+					width: 50%;
+					text-align: center;
+					margin: 0 auto 53px auto;
+				}
+
+				@include mobile {
+					margin: 0;
+					margin-bottom: 20px;
+				}
+			}
+
+			@include tablet {
+				grid-column: 1/-1;
+				text-align: center;
+				margin: 0 auto 30px auto;
+
+				@include mobile {
+					text-align: left;
+					margin: 0;
+					margin-bottom: 30px;
+				}
 			}
 		}
 	}
@@ -137,6 +239,25 @@
 					text-decoration-line: underline;
 				}
 			}
+		}
+
+		@include tablet {
+			form {
+				grid-column: 2/12;
+				text-align: left;
+				max-width: none;
+				width: 100%;
+
+				input {
+					max-width: none;
+					width: 100%;
+				}
+			}
+		}
+
+		@include mobile {
+			display: block;
+			grid-column: 1/12;
 		}
 	}
 }
