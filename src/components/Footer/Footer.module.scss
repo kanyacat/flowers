@@ -13,14 +13,23 @@
 	ul {
 		list-style: none;
 	}
+
 	.footer {
 		display: grid;
 
 		grid-template-columns: repeat(5, auto);
 		gap: $offset;
 
-		.logo {
-			max-width: 40px;
+		@include tablet {
+			grid-template-columns: repeat(3, 1fr);
+			justify-items: center;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+			justify-items: center;
+			text-align: center;
+			gap: 10px 0;
 		}
 
 		.title {
@@ -69,6 +78,26 @@
 				.link {
 					margin-right: 20px;
 				}
+			}
+		}
+
+		.requisites {
+			@include mobile {
+				grid-row: 4;
+			}
+		}
+
+		.catalogue {
+			@include mobile {
+				ul {
+					display: none;
+				}
+			}
+		}
+
+		.flowers {
+			@include mobile {
+				display: none;
 			}
 		}
 	}

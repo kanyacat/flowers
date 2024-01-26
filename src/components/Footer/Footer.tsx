@@ -5,13 +5,14 @@ import { ReactComponent as LogoIcon } from '../Header/logo.svg'
 import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
+import cn from 'classnames'
 
 const Footer = () => {
 	return (
 		<footer className={styles.root}>
 			<Container>
 				<div className={styles.footer}>
-					<div className={styles.block}>
+					<div className={cn(styles.block, styles.requisites)}>
 						<Link className={styles.logo} to={'/'}>
 							<LogoIcon />
 						</Link>
@@ -23,7 +24,7 @@ const Footer = () => {
 							Минск, улица Толстого
 						</p>
 					</div>
-					<div className={styles.block}>
+					<div className={cn(styles.block, styles.catalogue)}>
 						<h3 className={styles.title}>каталог</h3>
 						<ul>
 							<li>
@@ -58,7 +59,7 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className={styles.block}>
+					<div className={cn(styles.block, styles.flowers)}>
 						<h3 className={styles.title}>букет</h3>
 						<ul>
 							<li>
