@@ -104,12 +104,18 @@
 			gap: 30px;
 
 			@media (max-width: 840px) {
-				grid-template-columns: repeat(2, 160px);
+				grid-template-columns: repeat(2, auto);
+				gap: 6px;
 			}
 
 			img {
 				width: 160px;
 				height: 160px;
+
+				@include mobile {
+					width: 147px;
+					height: 137px;
+				}
 			}
 		}
 
