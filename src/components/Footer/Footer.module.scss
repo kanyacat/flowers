@@ -43,6 +43,10 @@
 			letter-spacing: 0.56px;
 			text-transform: uppercase;
 
+			&:first-child {
+				margin-top: 0;
+			}
+
 			@include mobile {
 				margin-bottom: 0;
 			}
@@ -74,7 +78,6 @@
 
 				p {
 					margin-bottom: 20px;
-					font-size: $small-size;
 
 					@include mobile {
 						margin-bottom: 5px;

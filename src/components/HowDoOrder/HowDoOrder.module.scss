@@ -35,7 +35,7 @@
 			text-align: center;
 
 			span {
-				top: 70px;
+				top: 100%;
 				left: 33%;
 			}
 		}
@@ -57,6 +57,7 @@
 		@media screen and (max-width: 395px) {
 			span {
 				top: 110px;
+				left: 30%;
 			}
 		}
 	}
@@ -163,7 +164,7 @@
 		z-index: 6;
 
 		@include small-tablet {
-			bottom: 10%;
+			bottom: 8%;
 			right: 0;
 		}
 	}

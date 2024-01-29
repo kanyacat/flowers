@@ -1,16 +1,21 @@
 @import '/src/scss/vars';
 @import '/src/scss/mixins';
 
+
 .main {
-	padding-top: 70px;
+	padding-top: 30px;
 	position: relative;
-	min-height: 130vh;
+	min-height: 120vh;
 
 	background: no-repeat url('https://i.ibb.co/y54QgSq/image-100.png')
 		center/cover;
 
 	@include flex-column;
 	align-items: center;
+
+	@include mobile {
+		padding-top: 70px;
+	}
 
 	&:after {
 		position: absolute;
@@ -120,9 +125,11 @@
 
 			margin: 0;
 
+			z-index: 5;
+
 			@include mobile {
 				bottom: 60%;
-				left: 10%;
+				left: 0;
 			}
 		}
 
@@ -165,8 +172,8 @@
 
 	.right {
 		position: absolute;
-		top: 45px;
-		right: 100px;
+		top: 8%;
+		right: 5%;
 
 		height: 40%;
 
@@ -249,6 +256,7 @@
 			}
 
 			.phoneBtn {
+				margin-right: -17px;
 				border-radius: 10px;
 				background: rgba(0, 0, 0, 0.2);
 				backdrop-filter: blur(10px);
