@@ -8,7 +8,7 @@
 
 	background: url('https://i.ibb.co/LSX3vj1/image-122.png') no-repeat -2% transparent;
 
-	@include small-tablet {
+	@include tablet {
 		background-size: 249px 520px;
 		background-position: 0 0;
 	}
@@ -25,7 +25,7 @@
 			position: absolute;
 
 			top: 100px;
-			left: 0;
+			left: 25%;
 
 			z-index: -2;
 		}
@@ -40,7 +40,7 @@
 			}
 		}
 
-		@include small-tablet {
+		@include tablet {
 			margin-bottom: 80px;
 		}
 
@@ -67,12 +67,13 @@
 		display: grid;
 		grid-template-columns: 300px 300px auto;
 		gap: 20px;
+		justify-content: flex-end;
 
 		@include tablet {
 			grid-template-columns: 1fr 1fr;
 		}
 
-		@include small-tablet {
+		@include tablet {
 			grid-template-columns: 1fr;
 			margin-left: 0;
 		}
@@ -105,7 +106,7 @@
 
 					background: $second-color;
 
-					@include small-tablet {
+					@include tablet {
 						width: 45px;
 						margin-bottom: 20px;
 					}
@@ -117,7 +118,7 @@
 					font-weight: 700;
 					letter-spacing: 1.2px;
 
-					@include small-tablet {
+					@include tablet {
 						margin-bottom: 10px;
 					}
 				}
@@ -131,7 +132,7 @@
 					text-transform: uppercase;
 				}
 
-				@include small-tablet {
+				@include tablet {
 					&:first-child {
 						margin-left: 200px;
 					}
@@ -163,7 +164,7 @@
 
 		z-index: 6;
 
-		@include small-tablet {
+		@include tablet {
 			bottom: 8%;
 			right: 0;
 		}

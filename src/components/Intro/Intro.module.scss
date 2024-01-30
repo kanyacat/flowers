@@ -5,7 +5,7 @@
 .main {
 	padding-top: 30px;
 	position: relative;
-	min-height: 120vh;
+	min-height: 150vh;
 
 	background: no-repeat url('https://i.ibb.co/y54QgSq/image-100.png')
 		center/cover;
@@ -14,7 +14,7 @@
 	align-items: center;
 
 	@include mobile {
-		padding-top: 10px;
+		padding-top: 50px;
 	}
 
 	&:after {
@@ -145,7 +145,7 @@
 			}
 
 			@include mobile {
-				top: 120vh;
+				top: 145vh;
 				padding-bottom: 50px;
 			}
 

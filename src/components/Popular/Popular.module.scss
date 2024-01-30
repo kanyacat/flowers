@@ -73,6 +73,10 @@
 	.title {
 		margin-bottom: 10px;
 
+		.subtitle {
+			margin-left: 40%;
+		}
+
 
 		@include tablet {
 			h1 {
