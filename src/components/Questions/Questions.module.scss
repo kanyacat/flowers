@@ -12,55 +12,32 @@
 	z-index: 1;
 
 	&:before {
-		position: absolute;
-
-		content: '';
-		top: 180px;
-		left: 30%;
-
-		width: 244.77px;
-		height: 285.945px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		background: $accent-color;
-
-		filter: blur(125px);
+		@include blur($accent-color, 244.77px, 285.945px, 32.828deg, 0);
 		z-index: -1;
 
 		@include mobile {
-			width: 105.699px;
-			height: 123.479px;
-			filter: blur(50px);
+			@include blur($accent-color, 105.699px, 123.479px, 32.828deg, 0, 50px);
 
 			left: 60%;
 			top: 150px;
+
+			z-index: -1;
 		}
 	}
 
 	&:after {
-		position: absolute;
+		@include blur($active-color, 416.232px, 427.121px, 32.828deg, 0);
 
-		content: '';
 		top: 100px;
 		left: 0;
-
-		width: 416.232px;
-		height: 427.121px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		background: $active-color;
-		filter: blur(125px);
 
 		z-index: -2;
 
 		@include mobile {
-			width: 179.741px;
-			height: 184.443px;
-			filter: blur(50px);
+			@include blur($active-color, 179.741px, 184.443px, 32.828deg, 0, 50px);
 
 			left: 20%;
+			z-index: -2;
 		}
 	}
 

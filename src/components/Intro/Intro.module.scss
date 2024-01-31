@@ -15,24 +15,14 @@
 
 	@include mobile {
 		padding-top: 50px;
+		min-height: 100vh;
 	}
 
 	&:after {
-		position: absolute;
+		@include blur($accent-color, 358.902px, 293.047px, 41.599deg, 125px);
 
-		content: '';
 		top: 40%;
 		left: 5%;
-
-		width: 358.902px;
-		height: 293.047px;
-		transform: rotate(41.599deg);
-		flex-shrink: 0;
-
-		border-radius: 358.902px;
-
-		background: $accent-color;
-		filter: blur(125px);
 
 		z-index: 1;
 
@@ -42,21 +32,10 @@
 	}
 
 	&:before {
-		position: absolute;
+		@include blur($active-color, 472.65px, 211.054px, -43.21deg, 472.65px);
 
-		content: '';
 		top: 30%;
 		right: 2%;
-
-		width: 472.65px;
-		height: 211.054px;
-		transform: rotate(-43.21deg);
-		flex-shrink: 0;
-
-		border-radius: 472.65px;
-		background: $active-color;
-
-		filter: blur(125px);
 
 		z-index: 1;
 	}
@@ -145,7 +124,7 @@
 			}
 
 			@include mobile {
-				top: 145vh;
+				top: 95vh;
 				padding-bottom: 50px;
 			}
 

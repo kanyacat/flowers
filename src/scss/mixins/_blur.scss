@@ -1,0 +1,18 @@
+@mixin blur($color, $width, $height, $rotate, $bordrad, $blur:125px) {
+  position: absolute;
+
+  content: '';
+
+  width: $width;
+  height: $height;
+  transform: rotate($rotate);
+  flex-shrink: 0;
+
+  border-radius: $bordrad;
+
+  background: $color;
+  filter: blur($blur);
+
+  z-index: -1;
+
+}

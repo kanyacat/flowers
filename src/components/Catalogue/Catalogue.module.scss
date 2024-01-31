@@ -9,41 +9,17 @@
 	padding-bottom: 123px;
 
 	&:before {
-		position: absolute;
+		@include blur($accent-color, 879.44px, 211.054px, 32.828deg, 879.44px);
 
-		content: '';
 		top: 60%;
 		right: 0;
-
-		width: 879.44px;
-		height: 211.054px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		border-radius: 879.44px;
-		background: $accent-color;
-		filter: blur(125px);
-
-		z-index: -1;
 	}
 
 	&:after {
-		position: absolute;
+		@include blur($active-color, 707.545px, 236.872px, 32.828deg, 707.545px);
 
-		content: '';
 		top: 50%;
-		left: -0%;
-
-		width: 707.545px;
-		height: 236.872px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		border-radius: 707.545px;
-		background: $active-color;
-		filter: blur(125px);
-
-		z-index: -1;
+		left: 0;
 	}
 
 	.backtext {

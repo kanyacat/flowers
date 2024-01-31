@@ -14,60 +14,25 @@
 		padding-bottom: 80px;
 	}
 
-	.blur {
-		position: absolute;
+	.blur, &:before {
+		@include blur($accent-color, 879.44px, 211.054px, 21.097deg, 879.44px);
 
-		content: '';
 		bottom: -60%;
+	}
+
+	.blur {
 		left: -30%;
-
-		width: 879.44px;
-		height: 211.054px;
-		transform: rotate(21.097deg);
-		flex-shrink: 0;
-
-		border-radius: 879.44px;
-		background: $accent-color;
-		filter: blur(125px);
-
-		z-index: -1;
 	}
 
 	&:before {
-		position: absolute;
-
-		content: '';
-		bottom: -60%;
 		right: 5%;
-
-		width: 879.44px;
-		height: 211.054px;
-		transform: rotate(21.097deg);
-		flex-shrink: 0;
-
-		border-radius: 879.44px;
-		background: $accent-color;
-		filter: blur(125px);
-
-		z-index: -1;
 	}
 
 	&:after {
-		position: absolute;
+		@include blur($active-color, 354.93px, 364.216px, 32.828deg, 0);
 
-		content: '';
 		top: 50%;
 		right: -5%;
-
-		width: 354.93px;
-		height: 364.216px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		background: $active-color;
-		filter: blur(125px);
-
-		z-index: -1;
 	}
 
 	.backtext {

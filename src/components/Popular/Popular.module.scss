@@ -17,21 +17,10 @@
 	}
 
 	&:before {
-		position: absolute;
+		@include blur(rgba(67, 255, 210, 0.47), 413.998px, 661.887px, 32.828deg, 0);
 
-		content: '';
 		top: 40%;
 		left: -5%;
-
-		width: 413.998px;
-		height: 661.887px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		background: rgba(67, 255, 210, 0.47);
-
-		filter: blur(125px);
-		z-index: -1;
 
 		@include tablet {
 			left: -40%;
@@ -43,21 +32,13 @@
 	}
 
 	&:after {
+		@include blur($active-color, 571.277px, 396.429px, 32.828deg, 0);
+
+
 		position: absolute;
 
-		content: '';
 		top: 60%;
 		left: 15%;
-
-		width: 571.277px;
-		height: 396.429px;
-		transform: rotate(32.828deg);
-		flex-shrink: 0;
-
-		background: $active-color;
-		filter: blur(125px);
-
-		z-index: -1;
 
 		@include tablet {
 			top: -20%;
