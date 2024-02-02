@@ -6,8 +6,26 @@ import { ReactComponent as ArrowLeft } from './arrow2.svg'
 import { ReactComponent as ArrowRight } from './arrow1.svg'
 
 import { Navigation } from 'swiper/modules'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import { SlideProps } from '../Slide/Slide.props'
+import Slide from '../Slide/Slide'
 
 const Slider = () => {
+	const [slides, setSlides] = useState<SlideProps[]>([])
+	async function getSlides():Promise<void> {
+		try {
+			const {data} = await axios.get<SlideProps[]>('https://65ba331eb4d53c0665524862.mockapi.io/flowers/Popular');
+			setSlides(data)
+		} catch (error) {
+			console.error(error);
+		}
+	}
+	
+	useEffect(() => {
+		getSlides()
+	}, [])
+	
 	return (
 		<div className={styles.root}>
 			<div className={styles.arrows}>
@@ -41,92 +59,10 @@ const Slider = () => {
 				modules={[Navigation]}
 				className={styles.swiper}
 			>
-				<SwiperSlide>
-					<div className={styles.info}>
-						<div>
-							<span className={styles.new}>
-								<p className={styles.ellipse}>NEW</p>
-							</span>
-							<img
-								className={styles.img}
-								src='https://i.ibb.co/X5ZG0MB/image-114-3.png 1x'
-								srcSet={'https://i.ibb.co/j6sN2C4/image-114.png 2x'}
-								loading={'lazy'}
-								alt='букет'
-							/>
-						</div>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<div className={styles.info}>
-						<img
-							className={styles.img}
-							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
-							srcSet={'https://i.ibb.co/pLwPHds/image-114-2.png 2x'}
-							loading={'lazy'}
-							alt='букет'
-						/>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<div className={styles.info}>
-						<span className={styles.sale}>
-							<p className={styles.ellipse}>SALE</p>
-						</span>
-						<img
-							className={styles.img}
-							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
-							srcSet={'https://i.ibb.co/ZB5QcSV/image-114-3.png 2x'}
-							loading={'lazy'}
-							alt='букет'
-						/>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<div className={styles.info}>
-						<img
-							className={styles.img}
-							src='https://i.ibb.co/X5ZG0MB/image-114-3.png'
-							srcSet={'https://i.ibb.co/j6sN2C4/image-114.png 2x'}
-							loading={'lazy'}
-							alt='букет'
-						/>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<div className={styles.info}>
-						<img
-							className={styles.img}
-							src='https://i.ibb.co/8rdWsxg/image-114-4.png'
-							srcSet={'https://i.ibb.co/pLwPHds/image-114-2.png 2x'}
-							loading={'lazy'}
-							alt='букет'
-						/>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className={styles.slide}>
-					<div className={styles.info}>
-						<img
-							className={styles.img}
-							src='https://i.ibb.co/ZBnsC3q/image-114-5.png'
-							srcSet={'https://i.ibb.co/ZB5QcSV/image-114-3.png 2x'}
-							loading={'lazy'}
-							alt='букет'
-						/>
-						<h3>лучший день</h3> <p className={styles.price}>167.000 ₽</p>
-						<button>в корзину</button>
-					</div>
-				</SwiperSlide>
+				{slides.map((s) =>
+					<SwiperSlide>
+						<Slide bouquet={s.bouquet} />
+					</SwiperSlide>)}
 			</Swiper>
 		</div>
 	)

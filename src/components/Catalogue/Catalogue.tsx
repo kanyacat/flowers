@@ -1,8 +1,33 @@
 import styles from './Catalogue.module.scss'
 import Container from '../../components/Container/Container'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
+interface CatalogueData {
+		driedflowers: string[];
+		flowers: string[];
+		additionally: string[];
+		id: string;
+}
 
 const Catalogue = () => {
+	
+	const [catalogue, setCatalogue] = useState<CatalogueData[]>([])
+	async function getCatalogue():Promise<void> {
+		try {
+			const {data} = await axios.get<CatalogueData[]>('https://65ba331eb4d53c0665524862.mockapi.io/flowers/Catalogue');
+			setCatalogue(data)
+		} catch (error) {
+			console.error(error);
+		}
+	}
+	
+	useEffect(() => {
+		getCatalogue()
+	}, [])
+	
+	
 	return (
 		<div className={styles.root}>
 			<span className={styles.backtext}>
@@ -25,9 +50,8 @@ const Catalogue = () => {
 					<div className={styles.card}>
 						<h2>готовые букеты из сухоцветов</h2>
 						<ul>
-							<li className={styles.list}>букеты</li>
-							<li className={styles.list}>для интерьера</li>
-							<li className={styles.list}>Композиции</li>
+							{catalogue[0]?.driedflowers.map((f) => <li  key={f} className={styles.list}>{f}</li>
+							)}
 							<Link to={'/'} className={styles.link}>
 								смотреть каталог
 							</Link>
@@ -36,11 +60,8 @@ const Catalogue = () => {
 					<div className={styles.card}>
 						<h2>Цветы</h2>
 						<ul>
-							<li className={styles.list}>Сборные букеты</li>
-							<li className={styles.list}>Монобукеты</li>
-							<li className={styles.list}>Композиции из цветов</li>
-							<li className={styles.list}>розы</li>
-							<li className={styles.list}>свадебные</li>
+							{catalogue[0]?.flowers.map((f) => <li key={f} className={styles.list}>{f}</li>
+							)}
 							<Link to={'/'} className={styles.link}>
 								смотреть каталог
 							</Link>
@@ -49,10 +70,8 @@ const Catalogue = () => {
 					<div className={styles.card}>
 						<h2>дополнительно</h2>
 						<ul>
-							<li className={styles.list}>шары</li>
-							<li className={styles.list}>игрушки</li>
-							<li className={styles.list}>открытки</li>
-							<li className={styles.list}>упаковка</li>
+							{catalogue[0]?.additionally.map((f) => <li key={f} className={styles.list}>{f}</li>
+							)}
 							<Link to={'/'} className={styles.link}>
 								смотреть каталог
 							</Link>

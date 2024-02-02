@@ -1,0 +1,36 @@
+import 'swiper/css'
+import styles from './Slide.module.scss'
+import './Slide.module.scss'
+import cn from 'classnames'
+import { SlideProps } from './Slide.props'
+
+const Slide = ({ bouquet }: SlideProps):JSX.Element => {
+	
+	
+	// console.log(status, name, price, img2x, img1x)
+	return (
+					<div className={styles.info}>
+						<div>
+							{
+								bouquet.status !== 'none' && <span className={cn(styles.ellipse, {
+										[styles.new]: bouquet.status === 'new',
+										[styles.sale]: bouquet.status === 'sale'
+									})}>
+								<p className={styles.ellipse}>{ bouquet.status}</p>
+							</span>
+							}
+							<img
+								className={styles.img}
+								src={bouquet.img1x}
+								srcSet={bouquet.img2x+' 2x'}
+								loading={'lazy'}
+								alt={bouquet.name}
+							/>
+						</div>
+						<h3>{bouquet.name}</h3> <p className={styles.price}>{bouquet.price} ₽</p>
+						<button>в корзину</button>
+					</div>
+			)
+}
+
+export default Slide
