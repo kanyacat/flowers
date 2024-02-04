@@ -18,6 +18,19 @@
 		text-align: center;
 		align-items: center;
 
+		.mobile {
+			display: none;
+
+			@include mobile {
+				grid-column: 1/-1;
+
+				display: flex;
+				justify-content: space-between;
+
+				margin-top: 20px;
+			}
+		}
+
 		.left {
 			display: grid;
 			align-items: center;
@@ -26,6 +39,9 @@
 
 			@include mobile {
 				display: none;
+				nav {
+					grid-column: 1;
+				}
 			}
 		}
 

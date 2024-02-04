@@ -1,5 +1,13 @@
 @import 'src/scss/vars';
 
+.wrapper {
+	padding: 10px 15px;
+
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+}
+
 .cart {
 	position: relative;
 

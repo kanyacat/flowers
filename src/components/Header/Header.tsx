@@ -4,10 +4,8 @@ import Container from '../Container/Container'
 import Cart from '../Cart/Cart'
 import { ReactComponent as LogoIcon } from './logo.svg'
 import { ReactComponent as GlassIcon } from './glass.svg'
-
-interface HeaderProps {
-	isMain: boolean
-}
+import { ReactComponent as BurgerIcon } from './burger.svg'
+import { HeaderProps } from './Header.props'
 
 const Header = (props: HeaderProps) => {
 	const { isMain } = props
@@ -16,7 +14,14 @@ const Header = (props: HeaderProps) => {
 		<header className={styles.root}>
 			<Container>
 				<ul className={styles.list}>
-					{/*ВСТАВИТЬ ССЫЛКИ СЮДА*/}
+					<div className={styles.mobile}>
+						<nav>
+							<BurgerIcon />
+						</nav>
+						<nav>
+							<Cart />
+						</nav>
+					</div>
 					<div className={styles.left}>
 						<nav>
 							<Link to={'/'}>

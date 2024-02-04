@@ -4,10 +4,12 @@ import { ReactComponent as CartIcon } from './cart.svg'
 
 const Cart = () => {
 	return (
-		<Link to={'/'} className={styles.cart}>
-			<CartIcon />
-			<span className={styles.count}>0</span>
-		</Link>
+		<div className={styles.wrapper}>
+			<Link to={'/'} className={styles.cart}>
+				<CartIcon />
+				<span className={styles.count}>0</span>
+			</Link>
+		</div>
 	)
 }
 

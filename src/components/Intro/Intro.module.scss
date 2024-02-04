@@ -1,7 +1,6 @@
 @import '/src/scss/vars';
 @import '/src/scss/mixins';
 
-
 .main {
 	padding-top: 30px;
 	position: relative;
@@ -27,17 +26,35 @@
 		z-index: 1;
 
 		@include mobile {
-			left: -30%;
+			@include blur($accent-color, 148.66px, 121.38px, 41.599deg, 125px, 50px);
+			z-index: 1;
+			left: -25%;
+			top: 30%;
 		}
 	}
 
 	&:before {
 		@include blur($active-color, 472.65px, 211.054px, -43.21deg, 472.65px);
 
-		top: 30%;
+		top: 10%;
 		right: 2%;
 
 		z-index: 1;
+
+		@include mobile {
+			@include blur(
+				$active-color,
+				100.65px,
+				111.054px,
+				-43.21deg,
+				472.65px,
+				50px
+			);
+			z-index: 1;
+
+			top: 20%;
+			right: 10%;
+		}
 	}
 
 	.flowers {
@@ -259,14 +276,6 @@
 
 					background: url('https://svgur.com/i/zBm.svg');
 				}
-			}
-
-			.cart {
-				padding: 15px;
-
-				border-radius: 10px;
-				background: rgba(0, 0, 0, 0.2);
-				backdrop-filter: blur(10px);
 			}
 		}
 	}
