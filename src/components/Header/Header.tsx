@@ -5,24 +5,36 @@ import Cart from '../Cart/Cart'
 import { ReactComponent as LogoIcon } from './logo.svg'
 import { ReactComponent as GlassIcon } from './glass.svg'
 import { ReactComponent as BurgerIcon } from './burger.svg'
+import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
+import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
+import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
+
 import { HeaderProps } from './Header.props'
+import { useState } from 'react'
+import cn from 'classnames'
 
 const Header = (props: HeaderProps) => {
 	const { isMain } = props
+
+	const [menu, setMenu] = useState(false)
 
 	return (
 		<header className={styles.root}>
 			<Container>
 				<ul className={styles.list}>
 					<div className={styles.mobile}>
-						<nav>
+						<nav onClick={() => setMenu(!menu)}>
 							<BurgerIcon />
 						</nav>
 						<nav>
 							<Cart />
 						</nav>
 					</div>
-					<div className={styles.left}>
+					<div
+						className={cn(styles.left, {
+							[styles.menuNone]: menu === false
+						})}
+					>
 						<nav>
 							<Link to={'/'}>
 								<LogoIcon className={styles.logo} />
@@ -43,7 +55,7 @@ const Header = (props: HeaderProps) => {
 						<nav>
 							<Link to={'/'}>FAQ</Link>
 						</nav>
-						<nav>
+						<nav className={styles.search}>
 							<Link to={'/'}>
 								<span>
 									<GlassIcon />
@@ -51,6 +63,36 @@ const Header = (props: HeaderProps) => {
 								Поиск
 							</Link>
 						</nav>
+						{menu ? (
+							<>
+								<nav>
+									<Link to={'/'}>для корпоративных клиентов</Link>
+								</nav>
+								<nav>
+									<a href='mailto:zakaz@loverflower.by' className={styles.mail}>
+										zakaz@loverflower.by
+									</a>
+									<p> Доставка 24/7 по договоренности с оператором</p>
+								</nav>
+								<nav>
+									<p className={styles.address}>ул. Тимирязева 67</p>
+									<p className={styles.time}>10:00 до 21:00 без выходных</p>
+								</nav>
+								<nav className={styles.social}>
+									<Link to={'/'} className={styles.socialLink}>
+										<InstIcon />
+									</Link>
+									<Link to={'/'} className={styles.socialLink}>
+										<WhatsappIcon />
+									</Link>
+									<Link to={'/'} className={styles.socialLink}>
+										<MobileIcon />
+									</Link>
+								</nav>
+							</>
+						) : (
+							''
+						)}
 					</div>
 					{isMain ? (
 						''
