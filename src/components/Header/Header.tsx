@@ -19,20 +19,35 @@ const Header = (props: HeaderProps) => {
 	const [menu, setMenu] = useState(false)
 
 	return (
-		<header className={styles.root}>
+		<header
+			className={cn(styles.root, {
+				[styles.rootMobile]: menu
+			})}
+		>
 			<Container>
-				<ul className={styles.list}>
-					<div className={styles.mobile}>
+				<ul
+					className={cn(styles.list, {
+						[styles.listMenu]: menu
+					})}
+				>
+					<div
+						className={cn(styles.mobile, {
+							[styles.mobileMenu]: menu
+						})}
+					>
 						<nav onClick={() => setMenu(!menu)}>
 							<BurgerIcon />
 						</nav>
-						<nav>
-							<Cart />
-						</nav>
+						{!menu && (
+							<nav>
+								<Cart />
+							</nav>
+						)}
 					</div>
 					<div
 						className={cn(styles.left, {
-							[styles.menuNone]: menu === false
+							[styles.menuNone]: !menu,
+							[styles.leftMenu]: menu
 						})}
 					>
 						<nav>
@@ -77,6 +92,20 @@ const Header = (props: HeaderProps) => {
 								<nav>
 									<p className={styles.address}>ул. Тимирязева 67</p>
 									<p className={styles.time}>10:00 до 21:00 без выходных</p>
+								</nav>
+								<nav>
+									<Link className={styles.smallnav} to={'/'}>
+										Политика конфиденциальности
+									</Link>
+									<br />
+									<Link className={styles.smallnav} to={'/'}>
+										Обработка персональных данных
+									</Link>
+								</nav>
+								<nav>
+									<a href='tel:+375291136969' className={styles.tel}>
+										+375 (29) 113-69-69
+									</a>
 								</nav>
 								<nav className={styles.social}>
 									<Link to={'/'} className={styles.socialLink}>

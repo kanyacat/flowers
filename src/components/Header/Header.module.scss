@@ -10,6 +10,14 @@
 
 	z-index: 100;
 
+	@include mobile {
+		&Mobile {
+			background-color: #000;
+			width: 90%;
+			padding-bottom: 30px;
+		}
+	}
+
 	.list {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -20,14 +28,17 @@
 
 		.mobile {
 			display: none;
+			grid-column: 1/12;
 
 			@include mobile {
-				grid-column: 1/-1;
-
 				display: flex;
 				justify-content: space-between;
 
 				margin-top: 20px;
+
+				&Menu {
+					grid-column: -1/2;
+				}
 			}
 		}
 
@@ -38,6 +49,9 @@
 			gap: 50px;
 
 			@include mobile {
+				&Menu {
+					grid-row: 1/3;
+				}
 				nav {
 					grid-column: 1;
 					text-align: left;
@@ -60,6 +74,10 @@
 				letter-spacing: 1.4px;
 			}
 
+			.tel {
+				border-bottom: 1px solid white;
+			}
+
 			p {
 				color: $light-color;
 				font-size: $small-size;
@@ -71,17 +89,17 @@
 				text-transform: uppercase;
 			}
 
+			.smallnav {
+				font-size: $small-size;
+				color: #555555;
+				text-transform: none;
+			}
+
 			.social {
-				@include flex-column;
-
-				border-radius: 10px;
-				background: rgba(0, 0, 0, 0.2);
-				backdrop-filter: blur(10px);
-
-				padding: 15px;
+				@include flex;
 
 				&Link {
-					margin-bottom: 20px;
+					margin-right: 20px;
 
 					&:last-child {
 						margin: 0;
