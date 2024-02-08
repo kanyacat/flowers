@@ -4,6 +4,7 @@ import Container from '../Container/Container'
 import Cart from '../Cart/Cart'
 import { ReactComponent as LogoIcon } from './logo.svg'
 import { ReactComponent as GlassIcon } from './glass.svg'
+import { ReactComponent as CloseIcon } from './close.svg'
 import { ReactComponent as BurgerIcon } from './burger.svg'
 import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
@@ -36,7 +37,7 @@ const Header = (props: HeaderProps) => {
 						})}
 					>
 						<nav onClick={() => setMenu(!menu)}>
-							<BurgerIcon />
+							{menu ? <CloseIcon /> : <BurgerIcon />}
 						</nav>
 						{!menu && (
 							<nav>
