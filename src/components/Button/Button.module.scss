@@ -1,0 +1,46 @@
+@import 'src/scss/vars';
+
+button {
+	font-family: Oswald, serif;
+	font-size: $main-size;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+
+	padding: 16px 50px;
+	color: black;
+
+	background: $accent-color;
+	border: none;
+	cursor: pointer;
+
+	transition: background-color 0.25s;
+
+	&:hover {
+		background: $active-color;
+		color: $light-color;
+	}
+
+	&:active {
+		background: $active-color;
+		color: $light-color;
+		box-shadow: 0 0 10px 0 #52002a inset;
+	}
+
+	&:focus {
+		color: $dark-color;
+
+		border: 1px solid $active-color;
+		background: $accent-color;
+		box-shadow: none;
+	}
+
+	&:disabled {
+		background: transparent;
+		color: #555;
+	}
+
+	outline: none;
+}

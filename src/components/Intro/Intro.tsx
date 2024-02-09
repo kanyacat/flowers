@@ -5,6 +5,7 @@ import Cart from '../../components/Cart/Cart'
 import { ReactComponent as InstIcon } from './SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from './SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from './SocialIcons/mobile.svg'
+import { Button } from '../Button/Button'
 
 const Intro = () => {
 	return (
@@ -18,7 +19,7 @@ const Intro = () => {
 						<span className={styles.text}>
 							<div className={styles.info}>
 								<p>Создаём для тех, кто ценит свежесть и изящество цветка</p>
-								<button>смотреть каталог</button>
+								<Button>смотреть каталог</Button>
 							</div>
 						</span>
 					</Container>
@@ -51,10 +52,10 @@ const Intro = () => {
 						<a href='tel:+375291136969' className={styles.phone}>
 							+375 (29) 113-69-69
 						</a>
-						<button className={styles.phoneBtn}>
+						<Button className={styles.phoneBtn}>
 							<span />
 							заказать звонок
-						</button>
+						</Button>
 					</div>
 					<div className={styles.rightBlock}>
 						<div className={styles.cart}>

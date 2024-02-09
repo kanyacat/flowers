@@ -1,6 +1,7 @@
 import styles from './Special.module.scss'
 import Container from '../Container/Container'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
+import { Button } from '../Button/Button'
 
 const Special = () => {
 	return (
@@ -64,12 +65,12 @@ const Special = () => {
 					/>
 				</div>
 
-				<button className={styles.btn}>
+				<Button className={styles.btn}>
 					собрать индивидуальный букет{' '}
 					<span className={styles.arrow}>
 						<ArrowIcon />
 					</span>
-				</button>
+				</Button>
 			</Container>
 		</div>
 	)

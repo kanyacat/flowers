@@ -11,13 +11,33 @@ import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
 
 import { HeaderProps } from './Header.props'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import cn from 'classnames'
+import { motion } from 'framer-motion'
+import { useMediaQuery } from 'react-responsive'
 
 const Header = (props: HeaderProps) => {
 	const { isMain } = props
 
-	const [menu, setMenu] = useState(false)
+	const [menu, setMenu] = useState<boolean>(false)
+
+	const [isDesktop, setIsDesktop] = useState<boolean>(false)
+	const desktop = useMediaQuery({ query: '(min-width: 585px)' })
+
+	useEffect(() => {
+		setIsDesktop(desktop)
+	}, [desktop])
+
+	const variants = {
+		opened: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				stiffness: 20
+			}
+		},
+		closed: !desktop ? { opacity: 0, x: '-100%' } : { opacity: 1 }
+	}
 
 	return (
 		<header
@@ -45,11 +65,14 @@ const Header = (props: HeaderProps) => {
 							</nav>
 						)}
 					</div>
-					<div
+					<motion.div
 						className={cn(styles.left, {
 							[styles.menuNone]: !menu,
 							[styles.leftMenu]: menu
 						})}
+						animate={menu ? 'opened' : 'closed'}
+						variants={variants}
+						initial={'closed'}
 					>
 						<nav>
 							<Link to={'/'}>
@@ -123,7 +146,7 @@ const Header = (props: HeaderProps) => {
 						) : (
 							''
 						)}
-					</div>
+					</motion.div>
 					{isMain ? (
 						''
 					) : (
