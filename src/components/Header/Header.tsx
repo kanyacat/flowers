@@ -40,17 +40,9 @@ const Header = (props: HeaderProps) => {
 	}
 
 	return (
-		<header
-			className={cn(styles.root, {
-				[styles.rootMobile]: menu
-			})}
-		>
+		<header className={styles.root}>
 			<Container>
-				<ul
-					className={cn(styles.list, {
-						[styles.listMenu]: menu
-					})}
-				>
+				<ul className={styles.list}>
 					<div
 						className={cn(styles.mobile, {
 							[styles.mobileMenu]: menu
@@ -66,86 +58,95 @@ const Header = (props: HeaderProps) => {
 						)}
 					</div>
 					<motion.div
-						className={cn(styles.left, {
-							[styles.menuNone]: !menu,
-							[styles.leftMenu]: menu
-						})}
+						className={styles.mobileWrapper}
 						animate={menu ? 'opened' : 'closed'}
 						variants={variants}
 						initial={'closed'}
 					>
-						<nav>
-							<Link to={'/'}>
-								<LogoIcon className={styles.logo} />
-							</Link>
-						</nav>
-						<nav>
-							<Link to={'/'}>Каталог</Link>
-						</nav>
-						<nav>
-							<Link to={'/'}>Доставка и оплата</Link>
-						</nav>
-						<nav>
-							<Link to={'/'}>О нас</Link>
-						</nav>
-						<nav>
-							<Link to={'/'}>Контакты</Link>
-						</nav>
-						<nav>
-							<Link to={'/'}>FAQ</Link>
-						</nav>
-						<nav className={styles.search}>
-							<Link to={'/'}>
-								<span>
-									<GlassIcon />
-								</span>
-								Поиск
-							</Link>
-						</nav>
-						{menu ? (
-							<>
-								<nav>
-									<Link to={'/'}>для корпоративных клиентов</Link>
-								</nav>
-								<nav>
-									<a href='mailto:zakaz@loverflower.by' className={styles.mail}>
-										zakaz@loverflower.by
-									</a>
-									<p> Доставка 24/7 по договоренности с оператором</p>
-								</nav>
-								<nav>
-									<p className={styles.address}>ул. Тимирязева 67</p>
-									<p className={styles.time}>10:00 до 21:00 без выходных</p>
-								</nav>
-								<nav>
-									<Link className={styles.smallnav} to={'/'}>
-										Политика конфиденциальности
-									</Link>
-									<br />
-									<Link className={styles.smallnav} to={'/'}>
-										Обработка персональных данных
-									</Link>
-								</nav>
-								<nav>
-									<a href='tel:+375291136969' className={styles.tel}>
-										+375 (29) 113-69-69
-									</a>
-								</nav>
-								<nav className={styles.social}>
-									<Link to={'/'} className={styles.socialLink}>
-										<InstIcon />
-									</Link>
-									<Link to={'/'} className={styles.socialLink}>
-										<WhatsappIcon />
-									</Link>
-									<Link to={'/'} className={styles.socialLink}>
-										<MobileIcon />
-									</Link>
-								</nav>
-							</>
-						) : (
-							''
-						)}
+						<motion.div
+							className={cn(styles.left, {
+								[styles.leftMenu]: menu
+							})}
+							animate={menu ? 'opened' : 'closed'}
+							variants={variants}
+							initial={'closed'}
+						>
+							<nav>
+								<Link to={'/'}>
+									<LogoIcon className={styles.logo} />
+								</Link>
+							</nav>
+							<nav>
+								<Link to={'/'}>Каталог</Link>
+							</nav>
+							<nav>
+								<Link to={'/'}>Доставка и оплата</Link>
+							</nav>
+							<nav>
+								<Link to={'/'}>О нас</Link>
+							</nav>
+							<nav>
+								<Link to={'/'}>Контакты</Link>
+							</nav>
+							<nav>
+								<Link to={'/'}>FAQ</Link>
+							</nav>
+							<nav className={styles.search}>
+								<Link to={'/'}>
+									<span>
+										<GlassIcon />
+									</span>
+									Поиск
+								</Link>
+							</nav>
+							{!desktop ? (
+								<>
+									<nav>
+										<Link to={'/'}>для корпоративных клиентов</Link>
+									</nav>
+									<nav>
+										<a
+											href='mailto:zakaz@loverflower.by'
+											className={styles.mail}
+										>
+											zakaz@loverflower.by
+										</a>
+										<p> Доставка 24/7 по договоренности с оператором</p>
+									</nav>
+									<nav>
+										<p className={styles.address}>ул. Тимирязева 67</p>
+										<p className={styles.time}>10:00 до 21:00 без выходных</p>
+									</nav>
+									<nav>
+										<Link className={styles.smallnav} to={'/'}>
+											Политика конфиденциальности
+										</Link>
+										<br />
+										<Link className={styles.smallnav} to={'/'}>
+											Обработка персональных данных
+										</Link>
+									</nav>
+									<nav>
+										<a href='tel:+375291136969' className={styles.tel}>
+											+375 (29) 113-69-69
+										</a>
+									</nav>
+									<nav className={styles.social}>
+										<Link to={'/'} className={styles.socialLink}>
+											<InstIcon />
+										</Link>
+										<Link to={'/'} className={styles.socialLink}>
+											<WhatsappIcon />
+										</Link>
+										<Link to={'/'} className={styles.socialLink}>
+											<MobileIcon />
+										</Link>
+									</nav>
+								</>
+							) : (
+								''
+							)}
+						</motion.div>
 					</motion.div>
 					{isMain ? (
 						''

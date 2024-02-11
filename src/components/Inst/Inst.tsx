@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
+import { motion } from 'framer-motion'
 
 const Inst = () => {
 	return (
@@ -13,37 +14,41 @@ const Inst = () => {
 			<Container>
 				<div className={styles.inst}>
 					<div className={styles.photo}>
-						<img
+						<motion.img
 							src={
 								'https://i.ibb.co/vQNLTyR/c7eed136e8c838ca0db681afa5ec7d37.png'
 							}
 							srcSet={'https://i.ibb.co/L1hcf9C/Rectangle-44-1.png 2x'}
 							loading={'lazy'}
 							alt='ёлочка'
+							whileHover={{ scale: 1.05 }}
 						/>
-						<img
+						<motion.img
 							src={
 								'https://i.ibb.co/ygKLj5G/737e506895fbf964ca1c64eb32bf7a3d.png'
 							}
 							srcSet={'https://i.ibb.co/JFMHJpD/Rectangle-45-1.png 2x'}
 							loading={'lazy'}
 							alt='букет-ёлка'
+							whileHover={{ scale: 1.05 }}
 						/>
-						<img
+						<motion.img
 							src={
 								'https://i.ibb.co/MZkgg4g/1c8914cae6d460c6ba629167278304dd.png'
 							}
 							srcSet={'https://i.ibb.co/zhRBDhW/Rectangle-46-1.png 2x'}
 							loading={'lazy'}
 							alt='свечки'
+							whileHover={{ scale: 1.05 }}
 						/>
-						<img
+						<motion.img
 							src={
 								'https://i.ibb.co/KD26phZ/00379419340f32647c4044263a074534.png'
 							}
 							srcSet={'https://i.ibb.co/k3GbdHC/Rectangle-47-1.png 2x'}
 							loading={'lazy'}
 							alt='золотой букет'
+							whileHover={{ scale: 1.05 }}
 						/>
 					</div>
 					<span className={styles.social}>

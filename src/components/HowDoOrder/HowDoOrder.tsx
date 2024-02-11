@@ -1,55 +1,84 @@
 import styles from './HowDoOrder.module.scss'
 import Container from '../Container/Container'
+import { motion } from 'framer-motion'
+import { variants } from '../../animation/animation'
 
 const HowDoOrder = () => {
 	return (
-		<div className={styles.root}>
+		<motion.div
+			className={styles.root}
+			initial={'hidden'}
+			whileInView={'visible'}
+			viewport={{ amount: 0.2 }}
+		>
 			<Container>
-				<h1 className={styles.title}>
+				<motion.h1 className={styles.title} variants={variants}>
 					как сделать <span>заказ</span>
-				</h1>
+				</motion.h1>
 				<div className={styles.columns}>
 					<div className={styles.column}>
 						<div className={styles.steps}>
-							<div className={styles.step}>
+							<motion.div
+								className={styles.step}
+								variants={variants}
+								custom={1}
+							>
 								<span className={styles.line} />
 								<h3>1 шаг</h3>
 								<p>Выберите какие цветы или подарки вы хотите купить</p>
-							</div>
-							<div className={styles.step}>
+							</motion.div>
+							<motion.div
+								className={styles.step}
+								variants={variants}
+								custom={2}
+							>
 								<h3>2 шаг</h3>
 								<p>
 									Оформите заказ, и мы отправим вам подтверждение на электронную
 									почту, а так же менеджер свяжется с вами по телефону или в
 									WhatsApp
 								</p>
-							</div>
-							<div className={styles.step}>
+							</motion.div>
+							<motion.div
+								className={styles.step}
+								variants={variants}
+								custom={3}
+							>
 								<h3>3 шаг</h3>
 								<p>
 									Наши флористы бережно подойдут к созданию букета цветов в
 									самом начале дня или накануне
 								</p>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 					<div className={styles.column}>
 						<div className={styles.steps}>
-							<div className={styles.step} style={{ marginLeft: 0 }}>
+							<motion.div
+								className={styles.step}
+								style={{ marginLeft: 0 }}
+								variants={variants}
+								custom={4}
+							>
 								<h3>4 шаг</h3>
 								<p>
 									Один из наших курьеров или партнёров доставит ваш заказ по
 									указанному адресу. Мы отправим вам сообщение в Whats App как
 									только заказ будет доставлен
 								</p>
-							</div>
-							<div className={styles.step} style={{ marginLeft: 0 }}>
+							</motion.div>
+							<motion.div
+								className={styles.step}
+								style={{ marginLeft: 0 }}
+								variants={variants}
+								custom={5}
+							>
 								<h3>5 шаг</h3>
 								<p>
 									Наслаждайтесь цветами, если вы заказали их для дома или
 									любовью, которой поделились, если вы заказали для друга
 								</p>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 					<div className={styles.column}>
@@ -60,7 +89,7 @@ const HowDoOrder = () => {
 				</div>
 			</Container>
 			<span className={styles.flover}></span>
-		</div>
+		</motion.div>
 	)
 }
 

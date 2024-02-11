@@ -2,18 +2,25 @@ import styles from './Special.module.scss'
 import Container from '../Container/Container'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
 import { Button } from '../Button/Button'
+import { motion } from 'framer-motion'
+import { buttonVariants, variants } from '../../animation/animation'
 
 const Special = () => {
 	return (
 		<div className={styles.root}>
 			<Container>
-				<div className={styles.special}>
-					<div className={styles.title}>
+				<motion.div
+					className={styles.special}
+					initial={'hidden'}
+					whileInView={'visible'}
+					viewport={{ amount: 0.2 }}
+				>
+					<motion.div className={styles.title} variants={variants}>
 						<h1>ОСОБЕННЫЙ</h1>
 						<div className={styles.titleBottom}>
 							<span className={styles.line}></span> <h1>ПОВОД?</h1>
 						</div>
-					</div>
+					</motion.div>
 					<img
 						className={styles.box}
 						src='https://i.ibb.co/ydrmj55/fd5523f6b408e680317412d52e929838.png'
@@ -21,7 +28,7 @@ const Special = () => {
 						loading={'lazy'}
 						alt='подарок'
 					/>
-					<div className={styles.info}>
+					<motion.div className={styles.info} variants={variants} custom={1}>
 						<p className={styles.text}>
 							Мы готовы прийти на помощь и собрать уникальный букет, на любой
 							вкус, бюджет и для любого события по вашему индивидуальному
@@ -35,7 +42,7 @@ const Special = () => {
 							</li>
 							<li>оплатить можно при получении или онлайн на сайте;</li>
 						</ul>
-					</div>
+					</motion.div>
 					<img
 						className={styles.flowers}
 						src={
@@ -63,14 +70,20 @@ const Special = () => {
 						loading={'lazy'}
 						alt='венок'
 					/>
-				</div>
-
-				<Button className={styles.btn}>
-					собрать индивидуальный букет{' '}
-					<span className={styles.arrow}>
-						<ArrowIcon />
-					</span>
-				</Button>
+				</motion.div>
+				<motion.div
+					variants={buttonVariants}
+					initial={'hidden'}
+					whileInView={'visible'}
+					viewport={{ amount: 0.2, once: true }}
+				>
+					<Button className={styles.btn}>
+						собрать индивидуальный букет{' '}
+						<span className={styles.arrow}>
+							<ArrowIcon />
+						</span>
+					</Button>
+				</motion.div>
 			</Container>
 		</div>
 	)

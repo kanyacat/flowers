@@ -6,25 +6,45 @@ import { ReactComponent as InstIcon } from './SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from './SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from './SocialIcons/mobile.svg'
 import { Button } from '../Button/Button'
+import { motion } from 'framer-motion'
+import { buttonVariants, variants } from '../../animation/animation'
 
 const Intro = () => {
 	return (
-		<div className={styles.root}>
+		<motion.div
+			className={styles.root}
+			initial={'hidden'}
+			whileInView={'visible'}
+		>
 			<div className={styles.main}>
 				<span className={styles.flowers} />
 				<div className={styles.content}>
 					<Container>
-						<h1>LOVER</h1>
-						<h1 className={styles.subtitle}>FLOWER</h1>
-						<span className={styles.text}>
+						<motion.h1 variants={variants} custom={1}>
+							LOVER
+						</motion.h1>
+						<motion.h1
+							className={styles.subtitle}
+							variants={variants}
+							custom={1}
+						>
+							FLOWER
+						</motion.h1>
+						<motion.span
+							className={styles.text}
+							variants={variants}
+							custom={1.5}
+						>
 							<div className={styles.info}>
 								<p>Создаём для тех, кто ценит свежесть и изящество цветка</p>
-								<Button>смотреть каталог</Button>
+								<motion.div variants={buttonVariants}>
+									<Button>смотреть каталог</Button>
+								</motion.div>
 							</div>
-						</span>
+						</motion.span>
 					</Container>
 				</div>
-				<div className={styles.right}>
+				<motion.div className={styles.right} variants={variants} custom={2}>
 					<div className={styles.rightBlock}>
 						<a href='mailto:zakaz@loverflower.by' className={styles.mail}>
 							zakaz@loverflower.by
@@ -62,10 +82,10 @@ const Intro = () => {
 							<Cart />
 						</div>
 					</div>
-				</div>
+				</motion.div>
 				<span className={styles.flover} />
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

@@ -4,17 +4,19 @@ import './Slide.module.scss'
 import cn from 'classnames'
 import { SlideProps } from './Slide.props'
 import { Button } from '../Button/Button'
+import { motion } from 'framer-motion'
 
 const Slide = ({ bouquet }: SlideProps): JSX.Element => {
 	return (
 		<div className={styles.info}>
 			<div className={styles.imgWrapper}>
-				<img
+				<motion.img
 					className={styles.img}
 					src={bouquet.img1x}
 					srcSet={bouquet.img2x + ' 2x'}
 					loading={'lazy'}
 					alt={bouquet.name}
+					whileHover={{ scale: 1.02 }}
 				/>
 				{bouquet.status !== 'none' && (
 					<span

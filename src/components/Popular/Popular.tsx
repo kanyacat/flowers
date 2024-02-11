@@ -3,16 +3,25 @@ import Container from '../Container/Container'
 import Slider from '../Slider/Slider'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
+import { motion } from 'framer-motion'
+import { variants } from '../../animation/animation'
 
 const Popular = () => {
 	return (
-		<div className={styles.root}>
+		<motion.div
+			className={styles.root}
+			initial={'hidden'}
+			whileInView={'visible'}
+			viewport={{ amount: 0.2 }}
+		>
 			<Container>
-				<div className={styles.title}>
+				<motion.div className={styles.title} variants={variants}>
 					<h1>популярные</h1>
 					<h1 className={styles.subtitle}>букеты</h1>
-				</div>
-				<p>Самые любимые композиции наших клиентов</p>
+				</motion.div>
+				<motion.p variants={variants} custom={2}>
+					Самые любимые композиции наших клиентов
+				</motion.p>
 				<div className={styles.slider}>
 					<Slider />
 				</div>
@@ -22,7 +31,7 @@ const Popular = () => {
 					<ArrowIcon />
 				</Link>
 			</Container>
-		</div>
+		</motion.div>
 	)
 }
 
