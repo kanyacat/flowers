@@ -5,10 +5,16 @@ import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
 import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
 import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
 import { motion } from 'framer-motion'
+import { variants } from '../../animation/animation'
 
 const Inst = () => {
 	return (
-		<div className={styles.root}>
+		<motion.div
+			className={styles.root}
+			initial={'hidden'}
+			whileInView={'visible'}
+			viewport={{ amount: 0.2 }}
+		>
 			<span className={styles.backtext}>instagram</span>
 			<span className={styles.blur} />
 			<Container>
@@ -22,6 +28,8 @@ const Inst = () => {
 							loading={'lazy'}
 							alt='ёлочка'
 							whileHover={{ scale: 1.05 }}
+							variants={variants}
+							custom={1}
 						/>
 						<motion.img
 							src={
@@ -31,6 +39,8 @@ const Inst = () => {
 							loading={'lazy'}
 							alt='букет-ёлка'
 							whileHover={{ scale: 1.05 }}
+							variants={variants}
+							custom={1.5}
 						/>
 						<motion.img
 							src={
@@ -40,6 +50,8 @@ const Inst = () => {
 							loading={'lazy'}
 							alt='свечки'
 							whileHover={{ scale: 1.05 }}
+							variants={variants}
+							custom={2}
 						/>
 						<motion.img
 							src={
@@ -49,6 +61,8 @@ const Inst = () => {
 							loading={'lazy'}
 							alt='золотой букет'
 							whileHover={{ scale: 1.05 }}
+							variants={variants}
+							custom={2.5}
 						/>
 					</div>
 					<span className={styles.social}>
@@ -71,7 +85,7 @@ const Inst = () => {
 					</span>
 				</div>
 			</Container>
-		</div>
+		</motion.div>
 	)
 }
 

@@ -54,7 +54,7 @@ const Catalogue = () => {
 						<p>Ознакомьтесь с нашими разделами каталога</p>
 					</motion.div>
 
-					<motion.div className={styles.card} variants={variants} custom={1.8}>
+					<motion.div className={styles.card} variants={variants} custom={1.5}>
 						<h2>готовые букеты из сухоцветов</h2>
 						<ul>
 							{catalogue[0]?.driedflowers.map(f => (
@@ -67,7 +67,7 @@ const Catalogue = () => {
 							</Link>
 						</ul>
 					</motion.div>
-					<motion.div className={styles.card} variants={variants} custom={2.6}>
+					<motion.div className={styles.card} variants={variants} custom={2}>
 						<h2>Цветы</h2>
 						<ul>
 							{catalogue[0]?.flowers.map(f => (
@@ -80,7 +80,7 @@ const Catalogue = () => {
 							</Link>
 						</ul>
 					</motion.div>
-					<motion.div className={styles.card} variants={variants} custom={3.4}>
+					<motion.div className={styles.card} variants={variants} custom={3}>
 						<h2>дополнительно</h2>
 						<ul>
 							{catalogue[0]?.additionally.map(f => (

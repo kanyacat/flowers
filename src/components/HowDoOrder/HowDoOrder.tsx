@@ -21,7 +21,7 @@ const HowDoOrder = () => {
 							<motion.div
 								className={styles.step}
 								variants={variants}
-								custom={1}
+								custom={1.8}
 							>
 								<span className={styles.line} />
 								<h3>1 шаг</h3>
@@ -30,7 +30,7 @@ const HowDoOrder = () => {
 							<motion.div
 								className={styles.step}
 								variants={variants}
-								custom={2}
+								custom={2.6}
 							>
 								<h3>2 шаг</h3>
 								<p>
@@ -42,7 +42,7 @@ const HowDoOrder = () => {
 							<motion.div
 								className={styles.step}
 								variants={variants}
-								custom={3}
+								custom={3.4}
 							>
 								<h3>3 шаг</h3>
 								<p>
@@ -58,7 +58,7 @@ const HowDoOrder = () => {
 								className={styles.step}
 								style={{ marginLeft: 0 }}
 								variants={variants}
-								custom={4}
+								custom={4.2}
 							>
 								<h3>4 шаг</h3>
 								<p>
