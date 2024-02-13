@@ -2,10 +2,8 @@ import styles from './Footer.module.scss'
 import Container from '../Container/Container'
 import { Link } from 'react-router-dom'
 import { ReactComponent as LogoIcon } from '../Header/logo.svg'
-import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
-import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
-import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
 import cn from 'classnames'
+import Social from '../Social/Social'
 
 const Footer = () => {
 	return (
@@ -128,15 +126,9 @@ const Footer = () => {
 							<p>прием звонков круглосуточно</p>
 						</div>
 						<div className={styles.social}>
-							<Link to={'/'} className={styles.link}>
-								<InstIcon />
-							</Link>
-							<Link to={'/'} className={styles.link}>
-								<WhatsappIcon />
-							</Link>
-							<Link to={'/'} className={styles.link}>
-								<MobileIcon />
-							</Link>
+							<Social className={styles.link} icon={'inst'} />
+							<Social className={styles.link} icon={'whatsapp'} />
+							<Social className={styles.link} icon={'mobile'} />
 						</div>
 					</div>
 				</div>

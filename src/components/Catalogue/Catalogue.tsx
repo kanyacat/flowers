@@ -35,7 +35,7 @@ const Catalogue = () => {
 			className={styles.root}
 			initial={'hidden'}
 			whileInView={'visible'}
-			viewport={{ amount: 0.2 }}
+			viewport={{ amount: 0.2, once: true }}
 		>
 			<span className={styles.backtext}>
 				<span>букеты</span>

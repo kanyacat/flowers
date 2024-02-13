@@ -9,7 +9,7 @@ const HowDoOrder = () => {
 			className={styles.root}
 			initial={'hidden'}
 			whileInView={'visible'}
-			viewport={{ amount: 0.2 }}
+			viewport={{ amount: 0.2, once: true }}
 		>
 			<Container>
 				<motion.h1 className={styles.title} variants={variants}>
@@ -63,7 +63,7 @@ const HowDoOrder = () => {
 								<h3>4 шаг</h3>
 								<p>
 									Один из наших курьеров или партнёров доставит ваш заказ по
-									указанному адресу. Мы отправим вам сообщение в Whats App как
+									указанному адресу. Мы отправим вам сообщение в WhatsApp как
 									только заказ будет доставлен
 								</p>
 							</motion.div>

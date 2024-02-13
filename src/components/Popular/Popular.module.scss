@@ -34,7 +34,6 @@
 	&:after {
 		@include blur($active-color, 571.277px, 396.429px, 32.828deg, 0);
 
-
 		position: absolute;
 
 		top: 60%;
@@ -57,7 +56,6 @@
 		.subtitle {
 			margin-left: 40%;
 		}
-
 
 		@include tablet {
 			h1 {
@@ -97,7 +95,6 @@
 		}
 
 		@include mobile {
-			text-align: right;
 			font-size: $second-size;
 		}
 	}

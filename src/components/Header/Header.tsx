@@ -6,15 +6,13 @@ import { ReactComponent as LogoIcon } from './logo.svg'
 import { ReactComponent as GlassIcon } from './glass.svg'
 import { ReactComponent as CloseIcon } from './close.svg'
 import { ReactComponent as BurgerIcon } from './burger.svg'
-import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
-import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
-import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
 
 import { HeaderProps } from './Header.props'
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
+import Social from '../Social/Social'
 
 const Header = (props: HeaderProps) => {
 	const { isMain } = props
@@ -132,15 +130,9 @@ const Header = (props: HeaderProps) => {
 										</a>
 									</nav>
 									<nav className={styles.social}>
-										<Link to={'/'} className={styles.socialLink}>
-											<InstIcon />
-										</Link>
-										<Link to={'/'} className={styles.socialLink}>
-											<WhatsappIcon />
-										</Link>
-										<Link to={'/'} className={styles.socialLink}>
-											<MobileIcon />
-										</Link>
+										<Social className={styles.socialLink} icon={'inst'} />
+										<Social className={styles.socialLink} icon={'whatsapp'} />
+										<Social className={styles.socialLink} icon={'mobile'} />
 									</nav>
 								</>
 							) : (

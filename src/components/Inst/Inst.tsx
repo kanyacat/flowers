@@ -1,11 +1,8 @@
 import styles from './Inst.module.scss'
 import Container from '../Container/Container'
-import { Link } from 'react-router-dom'
-import { ReactComponent as InstIcon } from '../Intro/SocialIcons/inst.svg'
-import { ReactComponent as WhatsappIcon } from '../Intro/SocialIcons/wats.svg'
-import { ReactComponent as MobileIcon } from '../Intro/SocialIcons/mobile.svg'
 import { motion } from 'framer-motion'
 import { variants } from '../../animation/animation'
+import Social from '../Social/Social'
 
 const Inst = () => {
 	return (
@@ -13,7 +10,7 @@ const Inst = () => {
 			className={styles.root}
 			initial={'hidden'}
 			whileInView={'visible'}
-			viewport={{ amount: 0.2 }}
+			viewport={{ amount: 0.2, once: true }}
 		>
 			<span className={styles.backtext}>instagram</span>
 			<span className={styles.blur} />
@@ -72,15 +69,9 @@ const Inst = () => {
 							loading={'lazy'}
 						/>
 						<div className={styles.socialBtn}>
-							<Link to={'/'} className={styles.socialLink}>
-								<InstIcon />
-							</Link>
-							<Link to={'/'} className={styles.socialLink}>
-								<WhatsappIcon />
-							</Link>
-							<Link to={'/'} className={styles.socialLink}>
-								<MobileIcon />
-							</Link>
+							<Social className={styles.socialLink} icon={'inst'} />
+							<Social className={styles.socialLink} icon={'whatsapp'} />
+							<Social className={styles.socialLink} icon={'mobile'} />
 						</div>
 					</span>
 				</div>

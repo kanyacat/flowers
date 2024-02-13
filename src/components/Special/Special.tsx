@@ -13,7 +13,7 @@ const Special = () => {
 					className={styles.special}
 					initial={'hidden'}
 					whileInView={'visible'}
-					viewport={{ amount: 0.2 }}
+					viewport={{ amount: 0.2, once: true }}
 				>
 					<motion.div className={styles.title} variants={variants}>
 						<h1>ОСОБЕННЫЙ</h1>

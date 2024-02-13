@@ -1,13 +1,10 @@
 import styles from './Intro.module.scss'
 import Container from '../../components/Container/Container'
-import { Link } from 'react-router-dom'
 import Cart from '../../components/Cart/Cart'
-import { ReactComponent as InstIcon } from './SocialIcons/inst.svg'
-import { ReactComponent as WhatsappIcon } from './SocialIcons/wats.svg'
-import { ReactComponent as MobileIcon } from './SocialIcons/mobile.svg'
 import { Button } from '../Button/Button'
 import { motion } from 'framer-motion'
 import { buttonVariants, variants } from '../../animation/animation'
+import Social from '../Social/Social'
 
 const Intro = () => {
 	return (
@@ -15,6 +12,7 @@ const Intro = () => {
 			className={styles.root}
 			initial={'hidden'}
 			whileInView={'visible'}
+			viewport={{ amount: 0.2, once: true }}
 		>
 			<div className={styles.main}>
 				<span className={styles.flowers} />
@@ -57,15 +55,9 @@ const Intro = () => {
 					</div>
 					<div className={styles.rightBlock}>
 						<div className={styles.social}>
-							<Link to={'/'} className={styles.socialLink}>
-								<InstIcon />
-							</Link>
-							<Link to={'/'} className={styles.socialLink}>
-								<WhatsappIcon />
-							</Link>
-							<Link to={'/'} className={styles.socialLink}>
-								<MobileIcon />
-							</Link>
+							<Social className={styles.socialLink} icon={'inst'} />
+							<Social className={styles.socialLink} icon={'whatsapp'} />
+							<Social className={styles.socialLink} icon={'mobile'} />
 						</div>
 					</div>
 					<div className={styles.rightBlock}>

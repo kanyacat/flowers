@@ -10,11 +10,11 @@
 
 	@include tablet {
 		background-size: 249px 520px;
-		background-position: 0 0;
+		background-position: 0 15px;
 	}
 
 	@media screen and (max-width: 395px) {
-		background-position: 0 50px;
+		background-position: 0 70px;
 	}
 
 	.title {
@@ -136,13 +136,11 @@
 					&:first-child {
 						margin-left: 200px;
 						margin-bottom: 10px;
-
 					}
 
 					&:nth-child(2) {
 						margin-left: 140px;
 						margin-bottom: 10px;
-
 					}
 
 					&:nth-child(3) {
@@ -170,7 +168,7 @@
 		z-index: 6;
 
 		@include tablet {
-			bottom: 8%;
+			bottom: 6%;
 			right: 0;
 		}
 	}

@@ -12,14 +12,14 @@ const Popular = () => {
 			className={styles.root}
 			initial={'hidden'}
 			whileInView={'visible'}
-			viewport={{ amount: 0.2 }}
+			viewport={{ amount: 0.2, once: true }}
 		>
 			<Container>
 				<motion.div className={styles.title} variants={variants}>
 					<h1>популярные</h1>
 					<h1 className={styles.subtitle}>букеты</h1>
 				</motion.div>
-				<motion.p variants={variants} custom={2}>
+				<motion.p variants={variants} custom={1.5}>
 					Самые любимые композиции наших клиентов
 				</motion.p>
 				<div className={styles.slider}>
