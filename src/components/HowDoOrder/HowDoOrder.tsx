@@ -1,7 +1,7 @@
 import styles from './HowDoOrder.module.scss'
 import Container from '../Container/Container'
 import { motion } from 'framer-motion'
-import { variants } from '../../animation/animation'
+import { variants } from '../../helpers/animation/animation'
 
 const HowDoOrder = () => {
 	return (

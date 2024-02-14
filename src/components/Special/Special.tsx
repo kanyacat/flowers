@@ -3,7 +3,7 @@ import Container from '../Container/Container'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
 import { Button } from '../Button/Button'
 import { motion } from 'framer-motion'
-import { buttonVariants, variants } from '../../animation/animation'
+import { buttonVariants, variants } from '../../helpers/animation/animation'
 
 const Special = () => {
 	return (

@@ -2,55 +2,79 @@
 @import 'src/scss/mixins';
 
 .form {
-		@include grid;
-		form {
-			grid-column: 8/13;
-			@include flex-column;
-			align-items: flex-start;
-			max-width: 445px;
+	@include grid;
+	form {
+		grid-column: 8/13;
+		@include flex-column;
+		align-items: flex-start;
+		max-width: 445px;
+		width: 100%;
+
+		.input {
 			width: 100%;
+			max-width: 445px;
+		}
 
-			.input {
-				width: 100%;
+		.phone {
+			position: relative;
+
+			input {
+				margin-bottom: 20px;
+				padding: 20px;
+
 				max-width: 445px;
-			}
-
-			button {
-				margin: 10px 0;
-				padding: 16px 93px;
-			}
-
-			p {
-				font-family: Roboto, sans-serif;
-				font-size: 11px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: normal;
-				letter-spacing: 0.2px;
-
-				text-transform: none;
-
-				a {
-					color: #d978ac;
-					text-decoration-line: underline;
-				}
+				width: 100%;
 			}
 		}
 
-		@include tablet {
-			form {
-				display: block;
-				grid-column: 1/12;
+		.error {
+			border: 1px solid $error-color;
+		}
 
-				text-align: left;
-				max-width: none;
-				width: 100%;
+		.errorMessage {
+			position: absolute;
+			color: $error-color;
+			bottom: 0;
+			left: 0;
 
-				.input {
-					max-width: none;
-					width: 100%;
-				}
+			z-index: 1;
+		}
+
+		button {
+			margin: 10px 0;
+			padding: 16px 93px;
+		}
+
+		p {
+			font-family: Roboto, sans-serif;
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.2px;
+
+			text-transform: none;
+
+			a {
+				color: #d978ac;
+				text-decoration-line: underline;
 			}
 		}
 	}
 
+	@include tablet {
+		form {
+			display: block;
+			grid-column: 1/12;
+
+			text-align: left;
+			max-width: none;
+			width: 100%;
+
+			.input {
+				max-width: none;
+				width: 100%;
+			}
+		}
+	}
+}

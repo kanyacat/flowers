@@ -1,7 +1,7 @@
 import styles from './Inst.module.scss'
 import Container from '../Container/Container'
 import { motion } from 'framer-motion'
-import { variants } from '../../animation/animation'
+import { variants } from '../../helpers/animation/animation'
 import Social from '../Social/Social'
 
 const Inst = () => {

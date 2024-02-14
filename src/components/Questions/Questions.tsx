@@ -2,7 +2,7 @@ import styles from './Questions.module.scss'
 import Container from '../Container/Container'
 import QuestionsForm from '../QuestionsForm/QuestionsForm'
 import { motion } from 'framer-motion'
-import { variants } from '../../animation/animation'
+import { variants } from '../../helpers/animation/animation'
 
 const Questions = () => {
 	return (

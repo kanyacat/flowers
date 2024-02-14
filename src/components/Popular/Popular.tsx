@@ -4,7 +4,7 @@ import Slider from '../Slider/Slider'
 import { Link } from 'react-router-dom'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
 import { motion } from 'framer-motion'
-import { variants } from '../../animation/animation'
+import { variants } from '../../helpers/animation/animation'
 
 const Popular = () => {
 	return (

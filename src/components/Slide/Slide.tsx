@@ -5,6 +5,7 @@ import cn from 'classnames'
 import { SlideProps } from './Slide.props'
 import { Button } from '../Button/Button'
 import { motion } from 'framer-motion'
+import { countRegex } from '../../helpers/helpers'
 
 const Slide = ({ bouquet }: SlideProps): JSX.Element => {
 	return (
@@ -29,7 +30,8 @@ const Slide = ({ bouquet }: SlideProps): JSX.Element => {
 					</span>
 				)}
 			</div>
-			<h3>{bouquet.name}</h3> <p className={styles.price}>{bouquet.price} ₽</p>
+			<h3>{bouquet.name}</h3>{' '}
+			<p className={styles.price}> {countRegex(bouquet.price)}</p>
 			<Button>в корзину</Button>
 		</div>
 	)

@@ -13,19 +13,21 @@ import Slide from '../Slide/Slide'
 
 const Slider = () => {
 	const [slides, setSlides] = useState<SlideProps[]>([])
-	async function getSlides():Promise<void> {
+	async function getSlides(): Promise<void> {
 		try {
-			const {data} = await axios.get<SlideProps[]>('https://65ba331eb4d53c0665524862.mockapi.io/flowers/Popular');
+			const { data } = await axios.get<SlideProps[]>(
+				'https://65ba331eb4d53c0665524862.mockapi.io/flowers/Popular'
+			)
 			setSlides(data)
 		} catch (error) {
-			console.error(error);
+			console.error(error)
 		}
 	}
-	
+
 	useEffect(() => {
 		getSlides()
 	}, [])
-	
+
 	return (
 		<div className={styles.root}>
 			<div className={styles.arrows}>
@@ -59,10 +61,11 @@ const Slider = () => {
 				modules={[Navigation]}
 				className={styles.swiper}
 			>
-				{slides.map((s) =>
-					<SwiperSlide>
+				{slides.map(s => (
+					<SwiperSlide key={s.bouquet.img1x}>
 						<Slide bouquet={s.bouquet} />
-					</SwiperSlide>)}
+					</SwiperSlide>
+				))}
 			</Swiper>
 		</div>
 	)

@@ -50,9 +50,16 @@ const Header = (props: HeaderProps) => {
 							{menu ? <CloseIcon /> : <BurgerIcon />}
 						</nav>
 						{!menu && (
-							<nav>
-								<Cart />
-							</nav>
+							<>
+								<nav>
+									<h1 className={styles.title}>
+										LOVER <br /> FLOWER
+									</h1>
+								</nav>
+								<nav>
+									<Cart />
+								</nav>
+							</>
 						)}
 					</div>
 					<motion.div

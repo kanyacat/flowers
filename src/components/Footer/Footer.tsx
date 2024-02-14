@@ -23,7 +23,9 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className={cn(styles.block, styles.catalogue)}>
-						<h3 className={styles.title}>каталог</h3>
+						<Link to={'/'} className={styles.title}>
+							каталог
+						</Link>
 						<ul>
 							<li>
 								<Link to={'/'}>популярное</Link>

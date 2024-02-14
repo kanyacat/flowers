@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import Input from '../Input/Input'
 import { Button } from '../Button/Button'
+import InputMask from 'react-input-mask'
+import cn from 'classnames'
 
 interface IFormData {
 	name?: string
@@ -46,15 +48,25 @@ const QuestionsForm = () => {
 					errorMessage={errors?.name?.message?.toString()}
 					className={styles.input}
 				/>
-				<Input
-					type='tel'
-					placeholder={'+7 (977) 777-77-77'}
-					{...register('phone', {
-						required: { value: true, message: 'Заполните номер телефона' }
-					})}
-					errorMessage={errors?.phone?.message?.toString()}
-					className={styles.input}
-				/>
+				<div className={cn(styles.input, styles.phone)}>
+					<InputMask
+						mask='+7 (999) 999-99-99'
+						type='tel'
+						placeholder={'+7 (977) 777-77-77'}
+						{...register('phone', {
+							required: { value: true, message: 'Заполните номер телефона' }
+						})}
+						className={cn(styles.input, {
+							[styles.error]: errors?.phone?.message?.toString()
+						})}
+					/>
+					{errors?.phone?.message?.toString() && (
+						<div className={styles.errorMessage}>
+							{errors?.phone?.message?.toString()}
+						</div>
+					)}
+				</div>
+
 				<Input
 					type='text'
 					placeholder={'Ваш комментарий'}
