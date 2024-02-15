@@ -2,9 +2,8 @@
 
 .wrapper {
 	padding: 10px 15px;
-
 	border-radius: 10px;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgb(0 0 0 / 20%);
 	backdrop-filter: blur(10px);
 }
 
@@ -23,19 +22,15 @@
 
 	.count {
 		position: absolute;
-
 		bottom: 20px;
-		left: 20px;
-
 		font-size: $main-size;
 		line-height: 15px;
 		text-align: center;
 		color: black;
-
 		width: 16px;
 		height: 16px;
-
 		background-color: $accent-color;
 		border-radius: 100%;
+		left: 20px;
 	}
 }

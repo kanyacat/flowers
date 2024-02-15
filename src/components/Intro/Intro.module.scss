@@ -5,11 +5,11 @@
 	padding-top: 30px;
 	position: relative;
 	min-height: 150vh;
-
 	background: no-repeat url('https://i.ibb.co/y54QgSq/image-100.png')
 		center/cover;
 
 	@include flex-column;
+
 	align-items: center;
 
 	@include mobile {
@@ -17,28 +17,27 @@
 		min-height: 100vh;
 	}
 
-	&:after {
+	&::after {
 		@include blur($accent-color, 358.902px, 293.047px, 41.599deg, 125px);
 
 		top: 40%;
 		left: 5%;
-
 		z-index: 1;
 
 		@include mobile {
 			@include blur($accent-color, 148.66px, 121.38px, 41.599deg, 125px, 50px);
+
 			z-index: 1;
 			left: -25%;
 			top: 30%;
 		}
 	}
 
-	&:before {
+	&::before {
 		@include blur($active-color, 472.65px, 211.054px, -43.21deg, 472.65px);
 
 		top: 10%;
 		right: 2%;
-
 		z-index: 1;
 
 		@include mobile {
@@ -50,8 +49,8 @@
 				472.65px,
 				50px
 			);
-			z-index: 1;
 
+			z-index: 1;
 			top: 20%;
 			right: 10%;
 		}
@@ -60,24 +59,19 @@
 	.flowers {
 		position: absolute;
 		content: '';
-
 		width: 100%;
 		height: 100%;
-
 		bottom: -5px;
 		right: 0;
-
 		background-image: linear-gradient(
 				180deg,
-				rgba(4, 10, 10, 0) 70%,
+				rgb(4 10 10 / 0%) 70%,
 				$dark-color 100%
 			),
 			url('https://i.ibb.co/87K8M8t/image-101-2.png');
 		background-repeat: no-repeat;
 		background-size: cover;
-
 		background-position: 50%;
-
 		z-index: 5;
 	}
 
@@ -86,13 +80,12 @@
 		height: 100%;
 
 		@include flex-column;
-		justify-content: center;
 
+		justify-content: center;
 		text-align: center;
 
 		h1 {
 			margin: 70px 0;
-
 			font-family: Cormorant, serif;
 			font-size: 180px;
 			font-style: normal;
@@ -109,7 +102,6 @@
 			@include mobile {
 				font-size: 50px;
 				letter-spacing: 5px;
-
 				margin: -50px 0;
 			}
 		}
@@ -118,9 +110,7 @@
 			position: absolute;
 			top: 65%;
 			left: -3%;
-
 			margin: 0;
-
 			z-index: 5;
 
 			@include mobile {
@@ -133,7 +123,6 @@
 			position: absolute;
 			top: 120%;
 			left: 25%;
-
 			z-index: 10;
 
 			@include tablet {
@@ -152,7 +141,6 @@
 				font-weight: 400;
 				line-height: normal;
 				letter-spacing: 0.4px;
-
 				text-transform: none;
 
 				p {
@@ -170,13 +158,12 @@
 		position: absolute;
 		top: 8%;
 		right: 5%;
-
 		height: 40%;
 
 		@include flex-column;
+
 		justify-content: space-between;
 		text-align: right;
-
 		z-index: 101;
 
 		@include small-tablet {
@@ -187,13 +174,12 @@
 			margin-bottom: 30px;
 
 			@include flex-column;
-			align-items: flex-end;
 
+			align-items: flex-end;
 			color: $light-color;
 			font-size: $small-size;
 			font-weight: 300;
 			letter-spacing: 1px;
-
 			font-style: normal;
 			line-height: normal;
 			text-transform: uppercase;
@@ -212,7 +198,6 @@
 			.mail,
 			.address {
 				margin-bottom: 4px;
-
 				font-weight: 400;
 				color: $accent-color;
 				font-size: $second-size;
@@ -228,9 +213,8 @@
 				@include flex-column;
 
 				border-radius: 10px;
-				background: rgba(0, 0, 0, 0.2);
+				background: rgb(0 0 0 / 20%);
 				backdrop-filter: blur(10px);
-
 				padding: 15px;
 
 				&Link {
@@ -244,7 +228,6 @@
 
 			.phone {
 				margin-bottom: 10px;
-
 				color: $accent-color;
 				font-size: 16px;
 				font-weight: 400;
@@ -254,11 +237,9 @@
 			.phoneBtn {
 				margin-right: -17px;
 				border-radius: 10px;
-				background: rgba(0, 0, 0, 0.2);
+				background: rgb(0 0 0 / 20%);
 				backdrop-filter: blur(10px);
-
 				padding: 9px 19px 9px 40px;
-
 				color: $accent-color;
 				font-size: $second-size;
 				font-weight: 400;
@@ -267,13 +248,10 @@
 				span {
 					position: absolute;
 					content: '';
-
 					top: 11.1px;
 					left: 14px;
-
 					width: 18px;
 					height: 18px;
-
 					background: url('https://svgur.com/i/zBm.svg');
 				}
 			}
@@ -282,17 +260,13 @@
 
 	.flover {
 		position: absolute;
-
 		content: '';
-
 		width: 305px;
 		height: 140px;
-
 		bottom: 0;
 		right: 10%;
 		background: no-repeat url('https://i.ibb.co/JQdrWrt/lover-flower.png')
 			center/contain;
-
 		z-index: 6;
 	}
 }

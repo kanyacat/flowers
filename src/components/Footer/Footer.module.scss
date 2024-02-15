@@ -7,7 +7,6 @@
 	font-weight: 300;
 	font-size: $main-size;
 	letter-spacing: 0.48px;
-
 	background-color: $dark-color;
 
 	ul {
@@ -16,7 +15,6 @@
 
 	.footer {
 		display: grid;
-
 		grid-template-columns: repeat(5, auto);
 		gap: $offset;
 
@@ -35,7 +33,6 @@
 		.title {
 			margin-bottom: 10px;
 			margin-top: 10px;
-
 			color: $accent-color;
 			font-size: $second-size;
 			font-weight: 700;
@@ -71,6 +68,7 @@
 
 			.description {
 				padding-top: 6px;
+
 				.title {
 					font-weight: 400;
 					margin-bottom: 6px;
@@ -115,6 +113,7 @@
 
 			@include mobile {
 				display: block;
+
 				ul {
 					display: none;
 				}

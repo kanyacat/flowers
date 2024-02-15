@@ -3,16 +3,14 @@
 
 .root {
 	position: relative;
-
 	padding-top: 22px;
 	padding-bottom: 52px;
-
 	background-color: #0f2222;
-
 	z-index: 1;
 
-	&:before {
+	&::before {
 		@include blur($accent-color, 244.77px, 285.945px, 32.828deg, 0);
+
 		z-index: -1;
 
 		@include mobile {
@@ -20,17 +18,15 @@
 
 			left: 60%;
 			top: 150px;
-
 			z-index: -1;
 		}
 	}
 
-	&:after {
+	&::after {
 		@include blur($active-color, 416.232px, 427.121px, 32.828deg, 0);
 
 		top: 100px;
 		left: 0;
-
 		z-index: -2;
 
 		@include mobile {
@@ -45,33 +41,25 @@
 		position: absolute;
 		width: 691.885px;
 		height: 800px;
-
 		background: url('https://i.ibb.co/XXz3gzY/image-123.png') no-repeat
 			transparent left top;
 		background-size: 691.885px 1037.827px;
-
 		z-index: -1;
 
 		@include tablet {
 			background-position: right top;
-
 			right: 0;
 			top: -10%;
-
 			width: 591.885px;
 			height: 737.827px;
-
 			background-size: 591.885px 737.827px;
-
 			transform: scaleX(-1);
 		}
 
 		@include mobile {
 			width: 252.365px;
 			height: 378.547px;
-
 			top: 0;
-
 			background-size: 252.365px 378.547px;
 		}
 	}
@@ -80,18 +68,14 @@
 		position: absolute;
 		width: 305px;
 		height: 305px;
-
 		background: url('https://i.ibb.co/tHH6Pzk/have-any-questions.png') no-repeat
 			transparent left top;
-
 		top: 250px;
 		left: 35%;
-
 		z-index: 2;
 
 		@include tablet {
 			background-size: 205px 205px;
-
 			top: 17%;
 			left: 25%;
 		}
@@ -99,7 +83,6 @@
 		@include mobile {
 			width: 135px;
 			height: 135px;
-
 			background-size: 135px 135px;
 			top: 120px;
 			left: 35%;
@@ -117,6 +100,7 @@
 
 		.title {
 			grid-column: 1 / 8;
+
 			span {
 				margin-left: 80px;
 			}
@@ -131,6 +115,7 @@
 
 			@include tablet {
 				grid-column: 1;
+
 				span {
 					margin-left: 0;
 				}
@@ -145,11 +130,9 @@
 			.line {
 				display: block;
 				margin: 53px 0;
-
 				min-width: 255px;
 				width: 100%;
 				height: 1px;
-
 				background: $accent-color;
 
 				@include tablet {
@@ -163,7 +146,6 @@
 			@include tablet {
 				grid-column: 1/13;
 				text-align: left;
-
 				margin-bottom: 20px;
 
 				@include mobile {

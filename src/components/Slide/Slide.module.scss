@@ -10,26 +10,20 @@
 
 .imgWrapper {
 	position: relative;
-
 }
 
 .new,
 .sale {
 	position: absolute;
-
 	width: 60px;
 	height: 60px;
-
 	top: 5px;
 	right: 5px;
-
 	border-radius: 60px;
-
 	z-index: 20;
 
 	.ellipse {
 		margin-top: 12px;
-
 		color: $dark-color;
 		font-size: $subtitle-size;
 		font-style: normal;
@@ -48,7 +42,9 @@
 }
 
 .info {
+	padding-bottom: 20px;
 	display: block;
+
 	@include flex-column;
 
 	align-items: center;
@@ -56,7 +52,6 @@
 
 	h3 {
 		margin: 5px 0;
-
 		font-size: $subtitle-size;
 		font-weight: 400;
 		letter-spacing: 0.8px;
@@ -65,17 +60,14 @@
 
 	.price {
 		margin-bottom: 20px;
-
 		font-size: $second-size;
 		font-weight: 700;
 	}
 
 	button {
 		padding: 16px 50px;
-
 		border: 0.5px solid $light-color;
 		background: transparent;
-
 		color: $light-color;
 		font-size: $second-size;
 		font-style: normal;
@@ -83,21 +75,20 @@
 		line-height: normal;
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
-
 		transition: background-color 0.25s;
 
-		&:hover {
-			color: $dark-color;
-			background: $accent-color;
-
-			border: 1px solid $accent-color;
-			box-shadow: none;
+		@media (hover: hover) {
+			&:hover {
+				color: $dark-color;
+				background: $accent-color;
+				border: 1px solid $accent-color;
+				box-shadow: none;
+			}
 		}
 
 		&:active {
 			color: $dark-color;
 			background: $accent-color;
-
 			border: none;
 			box-shadow: 0 0 10px 0 #01281f inset;
 		}
@@ -105,7 +96,6 @@
 		&:focus {
 			color: $light-color;
 			background: transparent;
-
 			border: 0.5px solid $accent-color;
 			box-shadow: none;
 		}

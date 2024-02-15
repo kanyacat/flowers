@@ -3,9 +3,12 @@
 
 .form {
 	@include grid;
+
 	form {
 		grid-column: 8/13;
+
 		@include flex-column;
+
 		align-items: flex-start;
 		max-width: 445px;
 		width: 100%;
@@ -21,7 +24,6 @@
 			input {
 				margin-bottom: 20px;
 				padding: 20px;
-
 				max-width: 445px;
 				width: 100%;
 			}
@@ -36,7 +38,6 @@
 			color: $error-color;
 			bottom: 0;
 			left: 0;
-
 			z-index: 1;
 		}
 
@@ -52,7 +53,6 @@
 			font-weight: 400;
 			line-height: normal;
 			letter-spacing: 0.2px;
-
 			text-transform: none;
 
 			a {
@@ -66,7 +66,6 @@
 		form {
 			display: block;
 			grid-column: 1/12;
-
 			text-align: left;
 			max-width: none;
 			width: 100%;

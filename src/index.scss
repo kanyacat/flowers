@@ -1,7 +1,7 @@
 @import './scss/vendor/normalize.css';
 @import './scss/vars';
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&display=swap';
 
 html {
 	box-sizing: border-box;
@@ -15,22 +15,19 @@ html {
 
 :root {
 	margin: 0 auto;
-
 	font-family: Oswald, sans-serif;
 	font-size: $second-size;
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 0.56px;
 	text-transform: uppercase;
-
 	color: rgba($light-color, 0.87);
 	background: $dark-color;
-
 	font-synthesis: none;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 body {
@@ -68,10 +65,13 @@ p {
 a {
 	text-decoration: none;
 	color: $light-color;
-
 	transition: color 0.2s linear;
 
-	&:hover {
+	&:active {
+		color: $active-color;
+	}
+
+	&:focus {
 		color: $accent-color;
 	}
 }
@@ -80,7 +80,6 @@ input {
 	background-color: transparent;
 	border: 2px solid $accent-color;
 	color: $light-color;
-
 	font-family: Oswald, serif;
 	font-size: $second-size;
 	font-style: normal;
@@ -88,9 +87,7 @@ input {
 	line-height: normal;
 	letter-spacing: 0.56px;
 	text-transform: uppercase;
-
 	outline: none;
-
 	transition: border-color 0.2s linear;
 
 	&::placeholder {
@@ -106,6 +103,11 @@ input {
 button {
 	background: none;
 	border: none;
-
 	cursor: pointer;
+}
+
+@media (hover: hover) {
+	a:hover {
+		color: $accent-color;
+	}
 }

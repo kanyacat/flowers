@@ -4,19 +4,16 @@
 .root {
 	margin-top: 20px;
 	position: relative;
-
 	margin-bottom: 100px;
-
 	background: url('https://i.ibb.co/84K5dR2/image-115.png') no-repeat right 25px
 		transparent;
-
 	background-size: 974px 748px;
 
 	@include small-tablet {
 		background: transparent;
 	}
 
-	&:before {
+	&::before {
 		@include blur(rgba(67, 255, 210, 0.47), 413.998px, 661.887px, 32.828deg, 0);
 
 		top: 40%;
@@ -31,11 +28,10 @@
 		}
 	}
 
-	&:after {
+	&::after {
 		@include blur($active-color, 571.277px, 396.429px, 32.828deg, 0);
 
 		position: absolute;
-
 		top: 60%;
 		left: 15%;
 
@@ -71,6 +67,7 @@
 
 		@include mobile {
 			text-align: center;
+
 			h1 {
 				font-size: 40px;
 			}
@@ -83,11 +80,9 @@
 
 	p {
 		margin-bottom: 56px;
-
 		font-size: $subtitle-size;
 		font-weight: 300;
 		letter-spacing: 0.4px;
-
 		text-align: center;
 
 		@include small-tablet {
@@ -107,7 +102,6 @@
 		color: $second-color;
 		font-size: $main-size;
 		font-weight: 700;
-
 		text-decoration-line: underline;
 	}
 }

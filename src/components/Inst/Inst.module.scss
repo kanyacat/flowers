@@ -4,17 +4,15 @@
 .root {
 	margin-top: 172px;
 	padding-bottom: 10px;
-
 	position: relative;
 	overflow: hidden;
 
 	@media screen and (max-width: (1240px)) {
-
 		margin-top: 26px;
 		padding-bottom: 80px;
 	}
 
-	.blur, &:before {
+	.blur, &::before {
 		@include blur($accent-color, 879.44px, 211.054px, 21.097deg, 879.44px);
 
 		bottom: -60%;
@@ -24,11 +22,11 @@
 		left: -30%;
 	}
 
-	&:before {
+	&::before {
 		right: 5%;
 	}
 
-	&:after {
+	&::after {
 		@include blur($active-color, 354.93px, 364.216px, 32.828deg, 0);
 
 		top: 50%;
@@ -37,7 +35,6 @@
 
 	.backtext {
 		position: absolute;
-
 		color: #0a1717;
 		font-size: 200px;
 		font-style: normal;
@@ -45,9 +42,7 @@
 		line-height: normal;
 		letter-spacing: 8px;
 		text-transform: uppercase;
-
 		z-index: -2;
-
 		bottom: 25%;
 		left: -1%;
 	}
@@ -57,11 +52,11 @@
 		grid-template-columns: 760px auto;
 		gap: 30px;
 
-		@media (max-width: 1240px) {
+		@media (width <= 1240px) {
 			grid-template-columns: 1fr;
 		}
 
-		@media (max-width: 840px) {
+		@media (width <= 840px) {
 			justify-items: center;
 		}
 
@@ -70,7 +65,7 @@
 			grid-template-columns: repeat(4, 160px);
 			gap: 30px;
 
-			@media (max-width: 840px) {
+			@media (width <= 840px) {
 				grid-template-columns: repeat(2, auto);
 				gap: 6px;
 			}
@@ -88,12 +83,11 @@
 
 		.social {
 			margin-bottom: 50px;
-
 			display: grid;
 			justify-content: flex-end;
 			gap: 40px;
 
-			@media (max-width: 1240px) {
+			@media (width <= 1240px) {
 				justify-content: flex-start;
 				grid-template-columns: repeat(2, 1fr);
 				grid-row: 1;
