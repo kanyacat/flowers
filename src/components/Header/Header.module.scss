@@ -2,10 +2,10 @@
 @import '/src/scss/mixins';
 
 .root {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #000;
+	background-color: transparent;
 	z-index: 100;
 
 	.list {
@@ -177,4 +177,9 @@
 			}
 		}
 	}
+}
+
+.black {
+	position: fixed;
+	background-color: #000;
 }

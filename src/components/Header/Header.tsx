@@ -6,17 +6,14 @@ import { ReactComponent as LogoIcon } from './logo.svg'
 import { ReactComponent as GlassIcon } from './glass.svg'
 import { ReactComponent as CloseIcon } from './close.svg'
 import { ReactComponent as BurgerIcon } from './burger.svg'
-
-import { HeaderProps } from './Header.props'
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 import Social from '../Social/Social'
+import { useScrollY } from '../../helpers/hooks/useScrollY'
 
-const Header = (props: HeaderProps) => {
-	const { isMain } = props
-
+const Header = () => {
 	const [menu, setMenu] = useState<boolean>(false)
 
 	const [isDesktop, setIsDesktop] = useState<boolean>(false)
@@ -37,8 +34,16 @@ const Header = (props: HeaderProps) => {
 		closed: !desktop ? { opacity: 0, x: '-100%' } : { opacity: 1 }
 	}
 
+	const y = useScrollY()
+
+	console.log(y)
+
 	return (
-		<header className={styles.root}>
+		<header
+			className={cn(styles.root, {
+				[styles.black]: y > 1000
+			})}
+		>
 			<Container>
 				<ul className={styles.list}>
 					<div
@@ -147,7 +152,7 @@ const Header = (props: HeaderProps) => {
 							)}
 						</motion.div>
 					</motion.div>
-					{isMain ? (
+					{y < 1000 ? (
 						''
 					) : (
 						<div className={styles.right}>
