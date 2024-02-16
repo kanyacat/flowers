@@ -50,7 +50,7 @@ const Intro = () => {
 								<div className={styles.info}>
 									<p>Создаём для тех, кто ценит свежесть и изящество цветка</p>
 									<motion.div variants={buttonVariants}>
-										<Button>смотреть каталог</Button>
+										<Button>смотреть&nbsp;каталог</Button>
 									</motion.div>
 								</div>
 							</motion.span>

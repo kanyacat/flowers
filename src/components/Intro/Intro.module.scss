@@ -112,11 +112,6 @@
 			left: -3%;
 			margin: 0;
 			z-index: 5;
-
-			@include mobile {
-				bottom: 60%;
-				left: 0;
-			}
 		}
 
 		.text {
@@ -126,10 +121,12 @@
 			z-index: 10;
 
 			@include tablet {
-				left: 0;
+				left: 5%;
 			}
 
 			@include mobile {
+				left: -200%;
+
 				top: 95vh;
 				padding-bottom: 50px;
 			}
@@ -183,9 +180,6 @@
 			font-style: normal;
 			line-height: normal;
 			text-transform: uppercase;
-
-			p {
-			}
 
 			&:nth-child(2) {
 				margin-bottom: 100px;

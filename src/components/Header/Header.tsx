@@ -19,6 +19,8 @@ const Header = () => {
 	const [isDesktop, setIsDesktop] = useState<boolean>(false)
 	const desktop = useMediaQuery({ query: '(min-width: 585px)' })
 
+	const y = useScrollY()
+
 	useEffect(() => {
 		setIsDesktop(desktop)
 	}, [desktop])
@@ -33,11 +35,6 @@ const Header = () => {
 		},
 		closed: !desktop ? { opacity: 0, x: '-100%' } : { opacity: 1 }
 	}
-
-	const y = useScrollY()
-
-	console.log(y)
-
 	return (
 		<header
 			className={cn(styles.root, {
@@ -152,7 +149,7 @@ const Header = () => {
 							)}
 						</motion.div>
 					</motion.div>
-					{y < 1000 ? (
+					{y < 950 && !desktop ? (
 						''
 					) : (
 						<div className={styles.right}>
@@ -162,9 +159,11 @@ const Header = () => {
 									+375 (29) 113-69-69
 								</a>
 							</nav>
-							<nav>
-								<Cart />
-							</nav>
+							{desktop && (
+								<nav>
+									<Cart />
+								</nav>
+							)}
 						</div>
 					)}
 				</ul>
