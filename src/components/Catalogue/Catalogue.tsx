@@ -1,26 +1,20 @@
-import styles from './Catalogue.module.scss'
-import Container from '../../components/Container/Container'
-import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { motion } from 'framer-motion'
+import Container from '../Container/Container'
 import { variants } from '../../helpers/animation/animation'
-
-interface CatalogueData {
-	driedflowers: string[]
-	flowers: string[]
-	additionally: string[]
-	id: string
-}
+import { Link } from 'react-router-dom'
+import styles from './Catalogue.module.scss'
+import { CatalogueData, FlowersData } from '../../../interface/FlowersData'
 
 const Catalogue = () => {
-	const [catalogue, setCatalogue] = useState<CatalogueData[]>([])
+	const [catalogue, setCatalogue] = useState<CatalogueData>()
 	async function getCatalogue(): Promise<void> {
 		try {
-			const { data } = await axios.get<CatalogueData[]>(
-				'https://65ba331eb4d53c0665524862.mockapi.io/flowers/Catalogue'
+			const { data } = await axios.get<FlowersData[]>(
+				'https://65d6fa3727d9a3bc1d79cd57.mockapi.io/api/flowers'
 			)
-			setCatalogue(data)
+			setCatalogue(data[0].catalogue)
 		} catch (error) {
 			console.error(error)
 		}
@@ -57,7 +51,7 @@ const Catalogue = () => {
 					<motion.div className={styles.card} variants={variants} custom={1.5}>
 						<h2>готовые букеты из сухоцветов</h2>
 						<ul>
-							{catalogue[0]?.driedflowers.map(f => (
+							{catalogue?.driedflowers.map((f: any) => (
 								<li key={f} className={styles.list}>
 									{f}
 								</li>
@@ -70,7 +64,7 @@ const Catalogue = () => {
 					<motion.div className={styles.card} variants={variants} custom={2}>
 						<h2>Цветы</h2>
 						<ul>
-							{catalogue[0]?.flowers.map(f => (
+							{catalogue?.flowers.map((f: any) => (
 								<li key={f} className={styles.list}>
 									{f}
 								</li>
@@ -83,7 +77,7 @@ const Catalogue = () => {
 					<motion.div className={styles.card} variants={variants} custom={3}>
 						<h2>дополнительно</h2>
 						<ul>
-							{catalogue[0]?.additionally.map(f => (
+							{catalogue?.additionally.map((f: any) => (
 								<li key={f} className={styles.list}>
 									{f}
 								</li>

@@ -8,17 +8,17 @@ import { ReactComponent as ArrowRight } from './arrow1.svg'
 import { Navigation } from 'swiper/modules'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { SlideProps } from '../Slide/Slide.props'
 import Slide from '../Slide/Slide'
+import { PopularData } from '../../../interface/FlowersData'
 
 const Slider = () => {
-	const [slides, setSlides] = useState<SlideProps[]>([])
+	const [slides, setSlides] = useState<PopularData[]>([])
 	async function getSlides(): Promise<void> {
 		try {
-			const { data } = await axios.get<SlideProps[]>(
-				'https://65ba331eb4d53c0665524862.mockapi.io/flowers/Popular'
+			const { data } = await axios.get(
+				'https://65d6fa3727d9a3bc1d79cd57.mockapi.io/api/flowers'
 			)
-			setSlides(data)
+			setSlides(data[1]?.popular)
 		} catch (error) {
 			console.error(error)
 		}
@@ -61,9 +61,9 @@ const Slider = () => {
 				modules={[Navigation]}
 				className={styles.swiper}
 			>
-				{slides.map(s => (
-					<SwiperSlide key={s.bouquet.img1x}>
-						<Slide bouquet={s.bouquet} />
+				{slides.map((s: any) => (
+					<SwiperSlide key={s.img1x}>
+						<Slide bouquet={s} />
 					</SwiperSlide>
 				))}
 			</Swiper>
