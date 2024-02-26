@@ -61,14 +61,14 @@
 
 	.columns {
 		margin-left: 35%;
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 300px 20px 300px 20px auto;
 		grid-template-columns: 300px 300px auto;
 		gap: 20px;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
 		justify-content: flex-end;
-
-		@include tablet {
-			grid-template-columns: 1fr 1fr;
-		}
 
 		@include tablet {
 			grid-template-columns: 1fr;
@@ -97,6 +97,7 @@
 					margin-bottom: 35px;
 					width: 65px;
 					height: 10px;
+					-ms-flex-negative: 0;
 					flex-shrink: 0;
 					background: $second-color;
 

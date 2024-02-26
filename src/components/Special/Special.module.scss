@@ -12,9 +12,11 @@
 		right: 0;
 		width: 354.93px;
 		height: 364.216px;
+		-ms-flex-negative: 0;
 		flex-shrink: 0;
 		border-radius: 879.44px;
 		background: $active-color;
+		-webkit-filter: blur(125px);
 		filter: blur(125px);
 		z-index: -1;
 	}
@@ -22,8 +24,10 @@
 	img {
 		width: 255px;
 		height: 223px;
+		-o-object-fit: cover;
 		object-fit: cover;
 		border-radius: 20px;
+		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 	}
 
@@ -33,9 +37,12 @@
 		@include grid;
 
 		gap: 30px;
+		-ms-grid-rows: auto 30px auto;
 		grid-template-rows: repeat(2, auto);
 
 		.title {
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 5;
 			grid-column: 1/6;
 
 			&Bottom {
@@ -52,36 +59,49 @@
 			display: block;
 			width: 205px;
 			height: 1px;
+			-ms-flex-negative: 0;
 			flex-shrink: 0;
 			background: $second-color;
 		}
 
 		.box {
+			-ms-grid-column: 10;
+			-ms-grid-column-span: 2;
 			grid-column: 10/12;
 		}
 
 		.flowers,
 		.note,
 		.wreath {
+			-ms-grid-row: 2;
 			grid-row: 2/2;
 		}
 
 		.flowers {
+			-ms-grid-column: 7;
+			-ms-grid-column-span: 1;
 			grid-column: 7/8;
 		}
 
 		.note {
+			-ms-grid-column: 8;
+			-ms-grid-column-span: 2;
 			grid-column: 8/10;
 			width: 160px;
 		}
 
 		.wreath {
+			-ms-grid-column: 10;
+			-ms-grid-column-span: 2;
 			grid-column: 10/12;
 		}
 
 		.info {
 			margin-left: 45px;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 5;
 			grid-column: 1/6;
+			-ms-grid-row: 2;
 			grid-row: 2/2;
 			width: 100%;
 
@@ -108,6 +128,8 @@
 
 		@include tablet {
 			.info {
+				-ms-grid-column: 1;
+				-ms-grid-column-span: 10;
 				grid-column: 1/11;
 				width: 100%;
 

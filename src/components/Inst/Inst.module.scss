@@ -12,7 +12,8 @@
 		padding-bottom: 80px;
 	}
 
-	.blur, &::before {
+	.blur,
+	&::before {
 		@include blur($accent-color, 879.44px, 211.054px, 21.097deg, 879.44px);
 
 		bottom: -60%;
@@ -49,7 +50,9 @@
 
 	.inst {
 		display: grid;
+		display: -ms-grid;
 		grid-template-columns: 760px auto;
+		-ms-grid-columns: 760px 30px auto;
 		gap: 30px;
 
 		@media (width <= 1240px) {
@@ -61,8 +64,9 @@
 		}
 
 		.photo {
+			display: -ms-grid;
 			display: grid;
-			grid-template-columns: repeat(4, 160px);
+			-ms-grid-columns: 160px 30px 160px 30px 160px 30px 160px;
 			gap: 30px;
 
 			@media (width <= 840px) {
@@ -83,7 +87,10 @@
 
 		.social {
 			margin-bottom: 50px;
+			display: -ms-grid;
 			display: grid;
+			-webkit-box-pack: end;
+			-ms-flex-pack: end;
 			justify-content: flex-end;
 			gap: 40px;
 

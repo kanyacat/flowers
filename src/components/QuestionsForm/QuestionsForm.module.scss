@@ -5,9 +5,15 @@
 	@include grid;
 
 	form {
+		-ms-grid-column: 8;
+		-ms-grid-column-span: 5;
 		grid-column: 8/13;
 
 		@include flex-column;
+
+		-webkit-box-align: start;
+
+		-ms-flex-align: start;
 
 		align-items: flex-start;
 		max-width: 445px;
@@ -57,6 +63,7 @@
 
 			a {
 				color: #d978ac;
+				-webkit-text-decoration-line: underline;
 				text-decoration-line: underline;
 			}
 		}
@@ -65,6 +72,8 @@
 	@include tablet {
 		form {
 			display: block;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 11;
 			grid-column: 1/12;
 			text-align: left;
 			max-width: none;

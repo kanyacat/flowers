@@ -53,6 +53,8 @@
 			width: 591.885px;
 			height: 737.827px;
 			background-size: 591.885px 737.827px;
+			-webkit-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
 			transform: scaleX(-1);
 		}
 
@@ -90,7 +92,10 @@
 	}
 
 	.head {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 1fr 70px 1fr 70px 1fr 70px 1fr 70px 1fr 70px 1fr 70px 1fr
+			70px 1fr 70px 1fr 70px 1fr 70px 1fr 70px 1fr;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 70px;
 
@@ -99,6 +104,8 @@
 		}
 
 		.title {
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 7;
 			grid-column: 1 / 8;
 
 			span {
@@ -114,6 +121,7 @@
 			}
 
 			@include tablet {
+				-ms-grid-column: 1;
 				grid-column: 1;
 
 				span {
@@ -123,6 +131,8 @@
 		}
 
 		.text {
+			-ms-grid-column: 9;
+			-ms-grid-column-span: 4;
 			grid-column: 9 / 13;
 			max-width: 255px;
 			width: 100%;
@@ -140,10 +150,11 @@
 					width: 50%;
 					margin-bottom: 20px;
 				}
-
 			}
 
 			@include tablet {
+				-ms-grid-column: 1;
+				-ms-grid-column-span: 12;
 				grid-column: 1/13;
 				text-align: left;
 				margin-bottom: 20px;

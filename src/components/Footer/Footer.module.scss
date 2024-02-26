@@ -14,7 +14,9 @@
 	}
 
 	.footer {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: auto $offset auto $offset auto $offset auto $offset auto;
 		grid-template-columns: repeat(5, auto);
 		gap: $offset;
 
@@ -102,6 +104,7 @@
 
 		.requisites {
 			@include mobile {
+				-ms-grid-row: 4;
 				grid-row: 4;
 			}
 		}

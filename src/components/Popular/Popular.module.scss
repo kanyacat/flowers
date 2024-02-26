@@ -102,6 +102,7 @@
 		color: $second-color;
 		font-size: $main-size;
 		font-weight: 700;
+		-webkit-text-decoration-line: underline;
 		text-decoration-line: underline;
 	}
 }

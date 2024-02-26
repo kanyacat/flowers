@@ -113,6 +113,7 @@
 		margin-bottom: 30px;
 		border-radius: 20px;
 		background: rgb(0 0 0 / 20%);
+		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		font-family: Oswald, serif;
 		font-style: normal;
@@ -191,6 +192,7 @@
 			color: $second-color;
 			font-size: $main-size;
 			font-weight: 700;
+			-webkit-text-decoration-line: underline;
 			text-decoration-line: underline;
 
 			@include tablet {

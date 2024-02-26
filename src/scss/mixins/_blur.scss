@@ -1,13 +1,16 @@
-@mixin blur($color, $width, $height, $rotate, $bordrad, $blur:125px) {
-  position: absolute;
-  content: '';
-  width: $width;
-  height: $height;
-  transform: rotate($rotate);
-  flex-shrink: 0;
-  border-radius: $bordrad;
-  background: $color;
-  filter: blur($blur);
-  z-index: -1;
-
+@mixin blur($color, $width, $height, $rotate, $bordrad, $blur: 125px) {
+	position: absolute;
+	content: '';
+	width: $width;
+	height: $height;
+	-webkit-transform: rotate($rotate);
+	-ms-transform: rotate($rotate);
+	transform: rotate($rotate);
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	border-radius: $bordrad;
+	background: $color;
+	-webkit-filter: blur($blur);
+	filter: blur($blur);
+	z-index: -1;
 }
